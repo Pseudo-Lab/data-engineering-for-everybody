@@ -138,7 +138,7 @@ C -->|Two| E[Result 2]
 * Introduction to Cloud Computing
 <br></br>
 
-# Reviewers 😃
+# Contributors 😃
 <br></br>
 
 # About us 👋🏼
