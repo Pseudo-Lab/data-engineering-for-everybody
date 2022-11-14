@@ -36,22 +36,37 @@ loop Pseudo-Lab x Data Camp
     DFS->>DFS: We learn together, share together and grow together!
 end
 ```
+
+---
 <br></br>
 
 # Overview 🔎
 ```mermaid
 flowchart LR
 
-A[Hard] -->|Text| B(Round)
-B --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
+%% Colors %%
+
+classDef blue fill:#66deff,stroke:#000,color:#000
+classDef green fill:#6ad98b,stroke:#000,color:#000
+classDef lgreen fill:#24e357,stroke:#000,color:#000
+
+%% GENERATION 1 %%
+p1(Beginner):::green --> funda(Fundamentals):::blue
+
+%% GENERATION 2 %%	
+funda --- c1(DE4E: Data Engineering for Everybody)
+
+%% GENERATION 3 %%	
+funda --> p2(Intermediate):::green ---> p3(Advanced):::blue
+
+%% GENERATION 4 %%	
+Mo(Background Knowledge):::green --- G2(Fill Your Knowledge and Experiences)
 ```
 > We want to let you know how data is connected :)
 
 <br></br>
 
-## fundamentals
+## Fundamentals
 ```mermaid
 flowchart LR
 
@@ -70,8 +85,9 @@ C -->|Two| E[Result 2]
 * Database Design
 * Introduction to Apache Airflow
 * Introduction to PySpark
+<br></br>
 
-## intermediate
+## Intermediate
 ```mermaid
 flowchart LR
 
@@ -86,8 +102,9 @@ C -->|Two| E[Result 2]
 * OOP(Object-Oriented Programming) in Python
 * Big Data Fundamentals with PySpark 
 * Data Analysis in SQL
- 
-## advanced
+<br></br>
+
+## Advanced
 ```mermaid
 flowchart LR
 
@@ -97,9 +114,10 @@ C -->|One| D[Result 1]
 C -->|Two| E[Result 2]
 ```
 * Cleaning Data with PySpark
+<br></br>
 
 
-## background knowledge
+## Background Knowledge
 ```mermaid
 flowchart LR
 
