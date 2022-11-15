@@ -69,7 +69,7 @@ Mo(Background Knowledge):::green --- G2(Fill Your Knowledge and Experiences)
 ## Fundamentals
 ```mermaid
 flowchart LR
-A(Beginner) -->|foot in the door!| B(Data Engineering)
+A(Beginner) -->|foot in the door!| B(Fundamentals)
 B --> C{Decision}
 C -->|fill the background knowledge?| D[Background Knowledge]
 C -->|Go next| E[Intermediate]
