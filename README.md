@@ -127,15 +127,37 @@ C -->|One| D[Result 1]
 C -->|Two| E[Result 2]
 ```
 * About Data Engineering
+* Data Analyst vs Data Engineer vs Data Science
 * Data Engineer's responsibilities
 * Structured Data, Semi-Structured Data and Unstructured Data
+* OLTP vs OLAP
+* ETL, ELT and Reverse ETL
+* Change Data Capture(CDC)
 * Data Lake vs Data warehouse
 * Lake house
 * Data engineers process
+* Batch Data vs Streaming Data
 * Batch processing vs Stream processing
 * Scheduling
+* Hadoop Ecosystem
 * Parallel computing
 * Introduction to Cloud Computing
+<br></br>
+
+## Summary
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'pie1': '#a8dba8', 'pie2': '#79bd9a', 'pie3': '#3b8686', 'pie4': '#cff09e', 'pie5': '#800080', 'pie6': '#ff0000', 'pie7': '#FFA500'}}}%%
+pie
+  "Fundamentals" : 10
+  "Intermediate" : 6
+  "Advanced" : 1
+  "Background Knowledge" : 16
+```
+
+<br></br>
+
+# Course Recommendation 💻
+* Data Engineer with Python - DataCamp
 <br></br>
 
 # Contributors 😃
