@@ -69,11 +69,16 @@ Mo(Background Knowledge):::green --- G2(Fill Your Knowledge and Experiences)
 ## Fundamentals
 ```mermaid
 flowchart LR
-
-A[Hard] -->|Text| B(Round)
+A(Beginner) -->|foot in the door!| B(Data Engineering)
 B --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
+C -->|fill the background knowledge?| D[Background Knowledge]
+C -->|Go next| E[Intermediate]
+
+style A fill:#cff09e,stroke:#3b8686,stroke-width:4px
+style B fill:#79bd9a,stroke:#08182b,stroke-width:2px
+style C fill:#cff09e,stroke:#3b8686,stroke-width:4px, 
+style D fill:#cff09e,stroke:#3b8686,stroke-width:4px
+style E fill:#cff09e,stroke:#3b8686,stroke-width:4px
 ```
 * Introduction to DE4E: Data Engineering for Everybody
 * Introduction to Data Engineering
