@@ -132,6 +132,7 @@ C -->|One| D[Result 1]
 C -->|Two| E[Result 2]
 ```
 * About Data Engineering
+* Data Literacy
 * Data Analyst vs Data Engineer vs Data Science
 * Data Engineer's responsibilities
 * Structured Data, Semi-Structured Data and Unstructured Data
@@ -160,9 +161,26 @@ pie
 ```
 
 <br></br>
+## Optional Supplementary (Courses, Readings & Media, GitHub)
+### Course Recommendation 💻
+* [DataCamp Career Track](https://www.datacamp.com/tracks/career)
+  * [Data Engineer with Python - DataCamp](https://www.datacamp.com/tracks/data-engineer-with-python)
+* [Coursera](https://www.coursera.org/)
+  * Coursera Data Engineering Specialization Courses
+    * [Duke+Coursera:  Python, Bash and SQL Essentials for Data Engineering Specialization](https://www.coursera.org/specializations/python-bash-sql-data-engineering-duke)
+    * [Duke+Coursera:  Cloud Computing for Data Coursera Course](https://www.coursera.org/specializations/building-cloud-computing-solutions-at-scale)
+  * Coursera Cloud Platform Courses
+    * [Google Cloud Platform Fundamentals: Core Infrastructure](https://www.coursera.org/learn/gcp-fundamentals) 
+* Cloud Training
+  * Google Cloud
+    * [Google Qwiklabs - Hands-On Cloud Training](https://www.qwiklabs.com/)
 
-# Course Recommendation 💻
-* Data Engineer with Python - DataCamp
+### Readings & Media ▶️
+* [Zero to MLOps with Databricks](https://learning.oreilly.com/videos/zero-to-mlops/062592022VIDEOPAIML/)
+
+### GitHub 👨‍💻
+* [data-engineering-and-dataops](https://github.com/noahgift/data-engineering-and-dataops)
+
 <br></br>
 
 # Contributors 😃
