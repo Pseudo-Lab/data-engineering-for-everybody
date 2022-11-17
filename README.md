@@ -90,10 +90,10 @@ DE4E는 데이터 분석가, 데이터 과학자, 데이터 엔지니어, 머신
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'pie1': '#a8dba8', 'pie2': '#79bd9a', 'pie3': '#3b8686', 'pie4': '#cff09e', 'pie5': '#800080', 'pie6': '#ff0000', 'pie7': '#FFA500'}}}%%
 pie
-  "Fundamentals" : 10
-  "Intermediate" : 6
-  "Advanced" : 1
-  "Background Knowledge" : 16
+  "Fundamentals" : 11
+  "Intermediate" : 9
+  "Advanced" : 9
+  "Background Knowledge" : 17
 ```
 
 <br></br>
