@@ -22,7 +22,7 @@ DE4E는 데이터 분석가, 데이터 과학자, 데이터 엔지니어, 머신
 
 # DE4E: Data Engineering for Everybody 
 <p align="center">
-  <img src="./img/test_info_20221118.png" width="1000">
+  <img src="./img/update_info.png" width="1000">
 </p>
 
 ---
