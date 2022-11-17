@@ -1,6 +1,6 @@
 # Data Engineering for Everybody
 <p align="center">
-  <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ffbdaefd4-c878-42d0-85b3-6bd65934bf10%2FUntitled.png?table=block&id=a8bbbdc4-774a-4c51-b020-bf7a7c91ceba&spaceId=333f96cf-396d-45ff-8331-232d41bd4d55&width=2000&userId=824ab286-e513-46f5-9abf-8a045b001e1a&cache=v2" width="1000">
+  <img src="./img/de4e_main.png" width="1000">
 </p>
 
 > DE4E: Data Engineering for Everybody by Pseudo-Lab
@@ -21,65 +21,14 @@ DE4E는 데이터 분석가, 데이터 과학자, 데이터 엔지니어, 머신
 <br></br>
 
 # DE4E: Data Engineering for Everybody 
-```mermaid
-sequenceDiagram
-Who want to know DE->>DE4E(Data Engineering for Everybody): Hello DE?
-DE4E(Data Engineering for Everybody)->>Who want to know DE: Why Don't you Start from fundamentals?
-Who want to know DE->>DE4E(Data Engineering for Everybody): I'm not familier with DE, any help?
-loop fill the background knowledge
-  DE4E(Data Engineering for Everybody)->>DE4E(Data Engineering for Everybody): we also prepared background knowledges for DE, DA, DS!
-end
-Who want to know DE->>DE4E(Data Engineering for Everybody): Thank u :) What's Next?
-DE4E(Data Engineering for Everybody)->>Who want to know DE: Dive Into Data Engineering! like Intermediate Python, Spark, Airflow...!
-
-loop Pseudo-Lab x Data Camp
-    DFS->>DFS: We learn together, share together and grow together!
-end
-```
+<p align="center">
+  <img src="./img/test_info_20221118.png" width="1000">
+</p>
 
 ---
-<br></br>
-
-# Overview 🔎
-```mermaid
-flowchart LR
-
-%% Colors %%
-
-classDef blue fill:#66deff,stroke:#000,color:#000
-classDef green fill:#6ad98b,stroke:#000,color:#000
-classDef lgreen fill:#24e357,stroke:#000,color:#000
-
-%% GENERATION 1 %%
-p1(Beginner):::green --> funda(Fundamentals):::blue
-
-%% GENERATION 2 %%	
-funda --- c1(DE4E: Data Engineering for Everybody)
-
-%% GENERATION 3 %%	
-funda --> p2(Intermediate):::green ---> p3(Advanced):::blue
-
-%% GENERATION 4 %%	
-Mo(Background Knowledge):::green --- G2(Fill Your Knowledge and Experiences)
-```
-> We want to let you know how data is connected :)
-
-<br></br>
 
 ## Fundamentals
-```mermaid
-flowchart LR
-A(Beginner) -->|foot in the door!| B(Fundamentals)
-B --> C{Decision}
-C -->|fill the background knowledge?| D[Background Knowledge]
-C -->|Go next| E[Intermediate]
-
-style A fill:#cff09e,stroke:#3b8686,stroke-width:4px
-style B fill:#79bd9a,stroke:#08182b,stroke-width:2px
-style C fill:#cff09e,stroke:#3b8686,stroke-width:4px, 
-style D fill:#cff09e,stroke:#3b8686,stroke-width:4px
-style E fill:#cff09e,stroke:#3b8686,stroke-width:4px
-```
+* CS Fundamentals
 * Introduction to DE4E: Data Engineering for Everybody
 * Introduction to Data Engineering
 * Introduction Shell Programming and Data Processing in Shell
@@ -93,44 +42,31 @@ style E fill:#cff09e,stroke:#3b8686,stroke-width:4px
 <br></br>
 
 ## Intermediate
-```mermaid
-flowchart LR
-
-A[Hard] -->|Text| B(Round)
-B --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
 * Efficient Python Code
 * Writing Function in Python
 * Unit Testing for Data Science in Python
 * OOP(Object-Oriented Programming) in Python
 * Big Data Fundamentals with PySpark 
 * Data Analysis in SQL
+* Messaging
+* Monitoring
+* Networking
 <br></br>
 
 ## Advanced
-```mermaid
-flowchart LR
-
-A[Hard] -->|Text| B(Round)
-B --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
 * Cleaning Data with PySpark
+* Introduction to IaaC(Infrastructure as Code)
+* Introduction to CI/CD(Continuous Integration and Continuous Delivery)
+* Introduction to Data security & Privacy
+* Introduction to DevOps
+* Introduction to DataOps
+* Introduction to Data Visualization
+* Machine Learning Fundamentals
+* Machine Learning Ops
 <br></br>
 
 
 ## Background Knowledge
-```mermaid
-flowchart LR
-
-A[Hard] -->|Text| B(Round)
-B --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
 * About Data Engineering
 * Data Literacy
 * Data Analyst vs Data Engineer vs Data Science
