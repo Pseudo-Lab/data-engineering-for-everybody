@@ -1,6 +1,6 @@
 # Data Engineering for Everybody
 <p align="center">
-  <img src="./de4e_main.png" width="1000">
+  <img src="https://github.com/Pseudo-Lab/data-engineering-for-everybody/blob/main/img/de4e_main.png" width="1000">
 </p>
 
 > DE4E: Data Engineering for Everybody by Pseudo-Lab
@@ -22,7 +22,7 @@ DE4E는 데이터 분석가, 데이터 과학자, 데이터 엔지니어, 머신
 
 # DE4E: Data Engineering for Everybody 
 <p align="center">
-  <img src="./update_info.png" width="1000">
+  <img src="https://github.com/Pseudo-Lab/data-engineering-for-everybody/blob/main/img/update_info.png" width="1000">
 </p>
 
 ---
