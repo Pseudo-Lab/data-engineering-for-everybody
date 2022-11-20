@@ -1,12 +1,20 @@
 format: jb-book
 root: intro
-part:
+parts:
 - caption: Fundamentals 
   numbered: False
+  chapters:
+  - file: docs/fundamentals/List.md
 - caption: Intermediates
   numbered: False
+  chapters:
+  - file: docs/intermediates/list.md
 - caption: Advanced
   numbered: False
+  chapters:
+  - file: docs/advanced/List.md
 - caption: Background Knowledge
   numbered: False
+  chapters:
+  - file: docs/background_knowledge/List.md
 
