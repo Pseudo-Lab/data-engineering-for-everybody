@@ -120,6 +120,9 @@ pie
 <br></br>
 
 # Contributors 😃
+<a href="https://github.com/Pseudo-Lab/data-engineering-for-everybody/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Pseudo-Lab/data-engineering-for-everybody" />
+</a>
 <br></br>
 
 # About us 👋🏼
