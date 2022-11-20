@@ -1,4 +1,4 @@
-# Fundamentals
+# List of Fundamentals
 
 * CS Fundamentals
 * Introduction to DE4E: Data Engineering for Everybody

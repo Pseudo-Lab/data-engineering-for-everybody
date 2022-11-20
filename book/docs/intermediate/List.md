@@ -1,4 +1,4 @@
-# Intermediate
+# List of Intermediate
 
 * Efficient Python Code
 * Writing Function in Python

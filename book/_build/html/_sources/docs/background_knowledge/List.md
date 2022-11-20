@@ -1,4 +1,4 @@
-# Background Knowledge
+# List of Background Knowledge
 
 * About Data Engineering
 * Data Literacy

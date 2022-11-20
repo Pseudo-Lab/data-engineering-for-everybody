@@ -1,4 +1,4 @@
-# Advanced
+# List of Advanced
 
 * Cleaning Data with PySpark
 * Introduction to IaaC(Infrastructure as Code)
