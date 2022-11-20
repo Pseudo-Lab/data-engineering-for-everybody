@@ -5,10 +5,10 @@ parts:
   numbered: False
   chapters:
   - file: docs/fundamentals/List.md
-- caption: Intermediates
+- caption: Intermediate
   numbered: False
   chapters:
-  - file: docs/intermediates/list.md
+  - file: docs/intermediate/List.md
 - caption: Advanced
   numbered: False
   chapters:
