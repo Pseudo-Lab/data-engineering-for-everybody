@@ -1,0 +1,5 @@
+format: jb-article
+root: intro
+sections:
+- file: docs/README
+  title: "대표 페이지"
