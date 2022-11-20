@@ -1,12 +1,12 @@
 #######################################################################################
 # Book settings
-title : PseudoLab [Study Name]
+title : DE4E: Data Engineering for Everybody
 author: PseudoLab
 logo: 'PseudoLab_logo.png'
 
 # Short description about the book
 description: >-
-  Basic Jupyter Book template for PseudoLab studies
+  Data Engineering Book about Data, by Data, for Data!
 
 #######################################################################################
 # Execution settings
@@ -25,7 +25,7 @@ notebook_interface            : "notebook"
 #######################################################################################
 # Launch button settings
 repository:
-  url                         : https://github.com/pseudo-lab/Jupyter-Book-Template
+  url                         : https://github.com/pseudo-lab/data-engineering-for-everybody
   path_to_book                : "book"
 
 latex:

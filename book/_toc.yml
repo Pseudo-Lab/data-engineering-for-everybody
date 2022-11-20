@@ -1,5 +1,12 @@
-format: jb-article
+format: jb-book
 root: intro
-sections:
-- file: docs/README
-  title: "대표 페이지"
+part:
+- caption: Fundamentals 
+  numbered: False
+- caption: Intermediates
+  numbered: False
+- caption: Advanced
+  numbered: False
+- caption: Background Knowledge
+  numbered: False
+
