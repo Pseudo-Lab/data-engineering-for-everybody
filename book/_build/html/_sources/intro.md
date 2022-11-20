@@ -1,6 +1,6 @@
 # Data Engineering for Everybody
 <p align="center">
-  <img src="./img/de4e_main.png" width="1000">
+  <img src="./../img/de4e_main.png" width="1000">
 </p>
 
 > DE4E: Data Engineering for Everybody by Pseudo-Lab
@@ -22,7 +22,7 @@ DE4E는 데이터 분석가, 데이터 과학자, 데이터 엔지니어, 머신
 
 # DE4E: Data Engineering for Everybody 
 <p align="center">
-  <img src="./img/update_info.png" width="1000">
+  <img src="./../img/update_info.png" width="1000">
 </p>
 
 ---
@@ -86,17 +86,6 @@ DE4E는 데이터 분석가, 데이터 과학자, 데이터 엔지니어, 머신
 * Introduction to Cloud Computing
 <br></br>
 
-## Summary
-```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'pie1': '#a8dba8', 'pie2': '#79bd9a', 'pie3': '#3b8686', 'pie4': '#cff09e', 'pie5': '#800080', 'pie6': '#ff0000', 'pie7': '#FFA500'}}}%%
-pie
-  "Fundamentals" : 11
-  "Intermediate" : 9
-  "Advanced" : 9
-  "Background Knowledge" : 17
-```
-
-<br></br>
 ## Optional Supplementary (Courses, Readings & Media, GitHub)
 ### Course Recommendation 💻
 * [DataCamp Career Track](https://www.datacamp.com/tracks/career)
@@ -120,6 +109,10 @@ pie
 <br></br>
 
 # Contributors 😃
+* [Youngjeon Lee](https://github.com/Steve-YJ)
+* [Sinyu Jeong](https://github.com/SSinyu)
+* [Heeseon Cheon](https://github.com/heehehe)
+
 <br></br>
 
 # About us 👋🏼
