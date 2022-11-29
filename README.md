@@ -120,9 +120,9 @@ pie
 <br></br>
 
 # Contributors 😃
-* [Youngjeon Lee](https://github.com/Steve-YJ)
-* [Sinyu Jeong](https://github.com/SSinyu)
-* [Heeseon Cheon](https://github.com/heehehe)
+<a href="https://github.com/Pseudo-Lab/data-engineering-for-everybody/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Pseudo-Lab/data-engineering-for-everybody" />
+</a>
 <br></br>
 
 # About us 👋🏼
