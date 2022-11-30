@@ -13,7 +13,7 @@ This repository aims to give a complete picture from the fundamental data engine
 <br></br>
 
 # Acknowledgement 🙏
-> **DE4E: Data Engineering for Everybody**는 가짜연구소의 DFS 프로그램에서 시작되었습니다. 시작에 앞서 감사의 말씀을 전합니다.
+> **DE4E: Data Engineering for Everybody**는 가짜연구소의 DSF 프로그램에서 시작되었습니다. 시작에 앞서 감사의 말씀을 전합니다.
 
 [가짜연구소](https://pseudo-lab.com/)는 DataCamp의 후원을 받아 Donates 프로그램을 진행하고 있습니다. 프로그램을 통해 구직자, 불완전 취업자, 비영리 연구 과학자, 학생분들께 DataCamp에서 제공하는 다양한 코스와 트랙을 제공합니다. 본 프로젝트는 DataCamp Donates 프로그램 중 하나인 [Data Science Fellowship](https://pseudo-lab.com/c9013228f63342b689a96e18c0db32c8)으로부터 시작되었습니다. 
 
