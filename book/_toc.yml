@@ -1,40 +1,22 @@
 format: jb-book
 root: intro
-parts:
-- caption: 1. Introduction to Data Engineering
-  numbered: False
-  chapters:
-  - file: docs/1_introduction_to_data_engineering/template_main_page.md
-    sections:
-    - file: docs/1_introduction_to_data_engineering/template_sub_page.md
-- caption: 2. Data Source and Data Collection
-  numbered: False
-  chapters:
-  - file: docs/2_data_source_and_data_collection/template_main_page.md
-    sections:
-    - file: docs/2_data_source_and_data_collection/template_sub_page.md
-- caption: 3. Data Transformation and Cleaning
-  numbered: False
-  chapters:
-  - file: docs/3_data_transformation_and_cleaning/template_main_page.md
-    sections:
-    - file: docs/3_data_transformation_and_cleaning/template_sub_page.md
-- caption: 4. Data Storage
-  numbered: False
-  chapters:
-  - file: docs/4_data_storage/template_main_page.md
-    sections:
-    - file: docs/4_data_storage/template_sub_page.md
-- caption: 5. Data Processing Frameworks 1
-  numbered: False
-  chapters:
-  - file: docs/5_data_processing_framework_1/template_main_page.md
-    sections:
-    - file: docs/5_data_processing_framework_1/template_sub_page.md
-- caption: 6. Data Processing Frameworks 2
-  numbered: False
-  chapters:
-  - file: docs/6_data_processing_framework_2/template_main_page.md
-    sections:
-    - file: docs/6_data_processing_framework_2/template_sub_page.md
+chapters:
+- file: docs/1_introduction_to_data_engineering/template_main_page.md
+  sections:
+  - file: docs/1_introduction_to_data_engineering/template_sub_page.md
+- file: docs/2_data_source_and_data_collection/template_main_page.md
+  sections:
+  - file: docs/2_data_source_and_data_collection/template_sub_page.md
+- file: docs/3_data_transformation_and_cleaning/template_main_page.md
+  sections:
+  - file: docs/3_data_transformation_and_cleaning/template_sub_page.md
+- file: docs/4_data_storage/template_main_page.md
+  sections:
+  - file: docs/4_data_storage/template_sub_page.md
+- file: docs/5_data_processing_frameworks_1/template_main_page.md
+  sections:
+  - file: docs/5_data_processing_frameworks_1/template_sub_page.md
+- file: docs/6_data_processing_frameworks_2/template_main_page.md
+  sections:
+  - file: docs/6_data_processing_frameworks_2/template_sub_page.md
 
