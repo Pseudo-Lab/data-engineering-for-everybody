@@ -1,8 +1,10 @@
 # 2. Data Source and Data Collection
 
-- author : 김세현, 이동욱
 - date : 2023-04-09
-- Keyword
+- author
+  * 김세현
+  * 이동욱
+- keyword
   * 원천 데이터
   * 데이터 수집
   * 자료형

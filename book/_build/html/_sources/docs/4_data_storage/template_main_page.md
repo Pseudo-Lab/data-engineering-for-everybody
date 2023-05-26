@@ -1,8 +1,10 @@
 # 4. Data Storage
 
-- author : 송윤호, 전희선
 - date : 2023-04-30
-- Keyword
+- author
+  * 송윤호
+  * 전희선
+- keyword
   * 데이터 저장소
   * 데이터베이스
   * 데이터 레이크

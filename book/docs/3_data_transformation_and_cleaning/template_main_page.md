@@ -1,8 +1,9 @@
 # 3. Data Transformation and Cleaning
 
-- author : 이영전
 - date : 2023-04-16
-- Keyword
+- author
+  * 이영전
+- keyword
   * 데이터 처리
   * 데이터 변환
   * 정규화

@@ -1,8 +1,10 @@
 # 6. Data Processing Frameworks II
 
-- author : 김예신, 최한승
 - date : 2023-05-07
-- Keyword
+- author
+  * 김예신
+  * 최한승
+- keyword
   * 실시간 데이터
   * 배치 데이터
   * 아파치 스파크

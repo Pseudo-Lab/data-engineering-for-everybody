@@ -1,8 +1,10 @@
 # 5. Data Processing Frameworks I
 
-- author : 이화림, 정경륜
 - date : 2023-05-07
-- Keyword
+- author
+  * 이화림
+  * 정경륜
+- keyword
   * 하둡 에코시스템
   * 아파치 스파크
   * 일괄 처리
