@@ -2,8 +2,8 @@
 
 - date : 2023-05-07
 - author
-  * 이화림
-  * 정경륜
+  * [이화림](https://github.com/HWALIMLEE)
+  * [정경륜](https://github.com/ryuni-dev)
 - keyword
   * 하둡 에코시스템
   * 아파치 스파크

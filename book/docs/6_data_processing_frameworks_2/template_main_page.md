@@ -2,8 +2,8 @@
 
 - date : 2023-05-07
 - author
-  * 김예신
-  * 최한승
+  * [김예신](https://github.com/yesinkim)
+  * [최한승](https://github.com/Henry-choi426)
 - keyword
   * 실시간 데이터
   * 배치 데이터

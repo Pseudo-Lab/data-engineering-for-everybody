@@ -2,7 +2,7 @@
 
 - date : 2023-04-16
 - author
-  * 이영전
+  * [이영전](https://github.com/Steve-YJ)
 - keyword
   * 데이터 처리
   * 데이터 변환

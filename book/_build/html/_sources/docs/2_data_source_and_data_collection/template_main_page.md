@@ -2,8 +2,8 @@
 
 - date : 2023-04-09
 - author
-  * 김세현
-  * 이동욱
+  * [김세현](https://github.com/sehyun-seankim)
+  * [이동욱](https://github.com/ehddnr301)
 - keyword
   * 원천 데이터
   * 데이터 수집

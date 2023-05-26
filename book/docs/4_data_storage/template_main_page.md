@@ -2,8 +2,8 @@
 
 - date : 2023-04-30
 - author
-  * 송윤호
-  * 전희선
+  * [송윤호](https://github.com/dbsgh3344)
+  * [전희선](https://github.com/heehehe)
 - keyword
   * 데이터 저장소
   * 데이터베이스
