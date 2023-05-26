@@ -1,0 +1,11 @@
+# 6. Data Processing Frameworks II
+
+- author : 김예신, 최한승
+- date : 2023-05-07
+- Keyword
+  * 실시간 데이터
+  * 배치 데이터
+  * 아파치 스파크
+  * 아파치 카프카
+  * 아파치 스톰
+  * 아파치 플링크
