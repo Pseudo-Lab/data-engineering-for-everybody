@@ -10,13 +10,24 @@ chapters:
 - file: docs/3_data_transformation_and_cleaning/template_main_page.md
   sections:
   - file: docs/3_data_transformation_and_cleaning/template_sub_page.md
-- file: docs/4_data_storage/template_main_page.md
+- file: docs/4_data_storage/main_page.md
   sections:
-  - file: docs/4_data_storage/template_sub_page.md
+  - file: docs/4_data_storage/1_data_warehouse_lake_and_lakehouse.md
+    sections:
+    - file: docs/4_data_storage/1.1_data_warehouse.md
+    - file: docs/4_data_storage/1.2_data_mart.md
+    - file: docs/4_data_storage/1.3_data_lake.md
+    - file: docs/4_data_storage/1.4_data_lakehouse.md
+    - file: docs/4_data_storage/1.5_data_pipeline_example.md
+  - file: docs/4_data_storage/2_databases.md
+    sections:
+    - file: docs/4_data_storage/2.1_key_value_store.md
+    - file: docs/4_data_storage/2.2_wide_column_store.md
+    - file: docs/4_data_storage/2.3_document_store.md
+    - file: docs/4_data_storage/2.4_graph_store.md
 - file: docs/5_data_processing_frameworks_1/template_main_page.md
   sections:
   - file: docs/5_data_processing_frameworks_1/template_sub_page.md
 - file: docs/6_data_processing_frameworks_2/template_main_page.md
   sections:
   - file: docs/6_data_processing_frameworks_2/template_sub_page.md
-
