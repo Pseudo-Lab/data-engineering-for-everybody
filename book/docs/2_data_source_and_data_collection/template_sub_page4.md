@@ -1,5 +1,21 @@
 # 데이터 처리방식 알아보기
 
+## SQL vs NoSQL
+
+<img src="./images/sub_page4_3.png" align="center">
+
+### SQL (Structured Query Language)
+
+- 관계형 데이터베이스(relational databases) 관리 시스템(이하 RDBMS)을 위한 언어입니다.
+- 1980년대 이르러 Oracle 사의 주도로 상업화, 대중화 되었습니다.
+- 국제적으로 공인된 표준 SQL이 있지만 DBMS 기업 제품(Oracle, SQL Server, MySQL 등) 별로 지원하는 기능 별로 구문이 다르거나 지원 기능 여부가 조금씩 차이가 있습니다.
+
+### NoSQL (Not Only SQL)
+
+- 관계형 데이터베이스의 한계를 극복하기 위해 만들어진 새로운 DBMS 언어입니다.
+- NoSQL 데이터베이스의 예시로는 Redis, MongoDB, Apache Cassandra, Neo4j 등이 있습니다.
+- SQL과는 다르게 DB별로 사용되는 문법이 차이가 큰 편입니다.
+
 ## Batch Processing vs Streaming Processing
 
 <img src="./images/sub_page4_1.png" align="center">
@@ -42,6 +58,3 @@
     - OLAP: 예를들어 집계시 12시간이 걸리는 작업에서 한개의 작업이 실패했을 경우 모두 RollBack 하는 방법도 있지만 실패한 작업에 대해서 Log를 남기고 집계한 후 추후 실패한 작업에 대해 재집계를 수행하고 값을 수정하는 방법또한 있습니다.
         - ※ 단순 예시이며 OLAP에서도 원자성에 대해 고려하는것은 중요합니다. ※
 
-## SQL vs NoSQL
-
-<img src="./images/sub_page4_3.png" align="center">
