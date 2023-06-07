@@ -10,6 +10,7 @@ chapters:
   - file: docs/2_data_source_and_data_collection/template_sub_page2.md
   - file: docs/2_data_source_and_data_collection/template_sub_page3.md
   - file: docs/2_data_source_and_data_collection/template_sub_page4.md
+  - file: docs/2_data_source_and_data_collection/template_sub_page5.md
 - file: docs/3_data_transformation_and_cleaning/template_main_page.md
   sections:
   - file: docs/3_data_transformation_and_cleaning/template_sub_page.md
