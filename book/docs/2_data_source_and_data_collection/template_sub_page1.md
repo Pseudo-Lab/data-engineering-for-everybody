@@ -10,8 +10,6 @@
 - `API`는 사내에 존재하는 API일수도, 구글 혹은 통계청 과 같은 외부에서 제공하는 API일수도 있습니다.
 - `Object Storage`는 AWS S3 일수도, 사내에 존재하는 File System일수도 있습니다.
 
-<hr style="border-top: 2px solid #ff9900;"/>
-
 ## 데이터의 종류별 특징은 어떻게 될까?
 
 ### Log

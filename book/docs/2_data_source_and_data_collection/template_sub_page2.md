@@ -26,7 +26,6 @@
 
 - Kafka와 같은 메시지 브로커를 중간에 두어 일시적으로 데이터를 축적함으로써 분산스토리지에 쓰는 속도를 안정화 하는 구조로 변경한다면 좀 더 안정적으로 데이터를 기록할 수 있습니다.
 
-<hr style="border-top: 2px solid #ff9900;"/>
 
 ## Source가 DB라면
 
@@ -75,7 +74,6 @@ ORDER BY QTY_INCREASE_RATE, QTY_2011 DESC
 </div>
 </details>
 
-<hr style="border-top: 2px solid #ff9900;"/>
 
 ## Source가 API라면
 
@@ -105,7 +103,6 @@ ORDER BY QTY_INCREASE_RATE, QTY_2011 DESC
 - Access Key가 가진 권한은 어느정도 까지인지.
 - 호출가능한 IP 등록이 된 IP인지 (↔아무곳에서나 호출가능한지) 확인하여야 합니다.
 
-<hr style="border-top: 2px solid #ff9900;"/>
 
 ## Source가 Object Storage라면
 
