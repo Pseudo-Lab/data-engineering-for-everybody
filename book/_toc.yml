@@ -13,9 +13,15 @@ chapters:
 - file: docs/4_data_storage/template_main_page.md
   sections:
   - file: docs/4_data_storage/template_sub_page.md
-- file: docs/5_data_processing_frameworks_1/template_main_page.md
+- file: docs/5_data_processing_frameworks_1/main_page.md
   sections:
-  - file: docs/5_data_processing_frameworks_1/template_sub_page.md
+  - file: docs/5_data_processing_frameworks_1/2_hadoop.md
+    sections:
+    - file: docs/5_data_processing_frameworks_1/2.1_hadoop_ecosystem.md
+    - file: docs/5_data_processing_frameworks_1/2.2_hdfs.md
+    - file: docs/5_data_processing_frameworks_1/2.3_map_reduce.md
+    - file: docs/5_data_processing_frameworks_1/2.4_map_reduce_example.md
+    - file: docs/5_data_processing_frameworks_1/reference.md
 - file: docs/6_data_processing_frameworks_2/template_main_page.md
   sections:
   - file: docs/6_data_processing_frameworks_2/template_sub_page.md
