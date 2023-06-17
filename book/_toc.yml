@@ -28,5 +28,7 @@ chapters:
     - file: docs/5_data_processing_frameworks_1/reference.md
 - file: docs/6_data_processing_frameworks_2/template_main_page.md
   sections:
-  - file: docs/6_data_processing_frameworks_2/template_sub_page.md
-
+  - file: docs/6_data_processing_frameworks_2/3. Apache-kafka.md
+  - file: docs/6_data_processing_frameworks_2/4. Apache-storm.md
+  - file: docs/6_data_processing_frameworks_2/5. Apache-flink.md
+  - file: docs/6_data_processing_frameworks_2/6. Appendix.md
