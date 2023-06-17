@@ -29,4 +29,8 @@ chapters:
 - file: docs/6_data_processing_frameworks_2/template_main_page.md
   sections:
   - file: docs/6_data_processing_frameworks_2/template_sub_page.md
-
+- file: docs/9_cloud_computing_and_data_engineering/main_page.md
+  sections:
+  - file: docs/9_cloud_computing_and_data_engineering/1_cloud_computing.md
+  - file: docs/9_cloud_computing_and_data_engineering/2_data_engineering.md
+  - file: docs/9_cloud_computing_and_data_engineering/3_cloud_computing_data_engineering.md
