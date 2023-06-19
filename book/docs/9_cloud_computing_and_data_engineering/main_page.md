@@ -2,8 +2,8 @@
 
 - date : 2023-06-03
 - author
-  * [이민행]
-  * [이영전]
+  * [이민행](https://github.com/dbunk903)
+  * [이영전](https://github.com/Steve-YJ)
 - keyword
   * 클라우드 컴퓨팅
   * 가상화

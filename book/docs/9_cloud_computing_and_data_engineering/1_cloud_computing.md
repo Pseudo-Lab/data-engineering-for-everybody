@@ -1,4 +1,4 @@
-# 1. **Cloud Computing**
+# 9.1 Cloud Computing
 
 ## 클라우드 컴퓨팅의 역사와 진화
 
