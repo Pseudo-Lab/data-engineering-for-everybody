@@ -1,4 +1,4 @@
-# 2. Data Engineering
+# 9.2 Data Engineering
 
 ### **데이터 아키텍쳐**
 
