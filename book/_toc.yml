@@ -28,9 +28,16 @@ chapters:
     - file: docs/5_data_processing_frameworks_1/reference.md
 - file: docs/6_data_processing_frameworks_2/template_main_page.md
   sections:
+<<<<<<< HEAD
   - file: docs/6_data_processing_frameworks_2/template_sub_page.md
 - file: docs/9_cloud_computing_and_data_engineering/main_page.md
   sections:
   - file: docs/9_cloud_computing_and_data_engineering/1_cloud_computing.md
   - file: docs/9_cloud_computing_and_data_engineering/2_data_engineering.md
   - file: docs/9_cloud_computing_and_data_engineering/3_cloud_computing_data_engineering.md
+=======
+  - file: docs/6_data_processing_frameworks_2/3. Apache-kafka.md
+  - file: docs/6_data_processing_frameworks_2/4. Apache-storm.md
+  - file: docs/6_data_processing_frameworks_2/5. Apache-flink.md
+  - file: docs/6_data_processing_frameworks_2/6. Appendix.md
+>>>>>>> 1ec02be76a28c2f7845583bf1ddabb77703d4afb
