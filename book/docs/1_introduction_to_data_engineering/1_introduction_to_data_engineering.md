@@ -1,4 +1,8 @@
 # 1. Introduction to Data Engineering
+- date : 2023-06-20
+- author
+  * [이영전](https://github.com/steve-yj)
+
 
 ![오늘 이 시간은 저를 포함한 스터디 러너분들의 물음에서 시작된 질문에 대한 답을 하는 시간입니다. 앞으로 다루게 될 데이터 엔지니어링에 대해서 궁금증을 갖고 그 물음을 하나씩 채워나갈 수 있는 시간이 되셨으면 좋겠습니다!](images/1.0_intro.png)
 
