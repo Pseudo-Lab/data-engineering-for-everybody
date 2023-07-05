@@ -1,9 +1,15 @@
 format: jb-book
 root: intro
 chapters:
-- file: docs/1_introduction_to_data_engineering/template_main_page.md
+- file: docs/1_introduction_to_data_engineering/main_page.md
   sections:
-  - file: docs/1_introduction_to_data_engineering/template_sub_page.md
+  - file: docs/1_introduction_to_data_engineering/1.0_about_bigdata.md
+  - file: docs/1_introduction_to_data_engineering/1.1_what_is_data_engineering.md
+  - file: docs/1_introduction_to_data_engineering/1.2_data_engineering_use_case.md
+  - file: docs/1_introduction_to_data_engineering/1.3_modern_data_engineering.md
+  - file: docs/1_introduction_to_data_engineering/1.4_further_more.md
+  - file: docs/1_introduction_to_data_engineering/1.5_recap.md
+  - file: docs/1_introduction_to_data_engineering/1.6_reference.md
 - file: docs/2_data_source_and_data_collection/template_main_page.md
   sections:
   - file: docs/2_data_source_and_data_collection/template_sub_page1.md
