@@ -39,7 +39,7 @@ html:
   use_repository_button: true
   comments:
     utterances:
-      repo: "github-org/github-repo"
+      repo: "Pseudo-Lab/data-engineering-for-everybody"
   
 sphinx:
   config:
