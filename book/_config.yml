@@ -37,9 +37,6 @@ html:
   favicon: 'PseudoLab_logo.png'
   use_issues_button: true
   use_repository_button: true
-  comments:
-    utterances:
-      repo: "github-org/github-repo"
   
 sphinx:
   config:
