@@ -37,6 +37,13 @@ chapters:
     - file: docs/4_data_storage/2.4_graph_store.md
 - file: docs/5_data_processing_frameworks_1/main_page.md
   sections:
+    - file: docs/5_data_processing_frameworks_1/1.1_big_data.md
+    - file: docs/5_data_processing_frameworks_1/1.2_parallel_and_distribution.md
+    - file: docs/5_data_processing_frameworks_1/1.3_cache.md
+    - file: docs/5_data_processing_frameworks_1/1.4_indexing.md
+    - file: docs/5_data_processing_frameworks_1/1.5_memory_optimization.md
+    - file: docs/5_data_processing_frameworks_1/1.6_in_memory_db.md
+    - file: docs/5_data_processing_frameworks_1/1.7_distribution_system.md
   - file: docs/5_data_processing_frameworks_1/2_hadoop.md
     sections:
     - file: docs/5_data_processing_frameworks_1/2.1_hadoop_ecosystem.md
