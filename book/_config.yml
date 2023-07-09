@@ -38,8 +38,10 @@ html:
   use_issues_button: true
   use_repository_button: true
   comments:
-    utterances: true
-      # repo: "Pseudo-Lab/data-engineering-for-everybody"
+    utterances:
+      src: "https://utteranc.es/client.js"
+      repo: "Pseudo-Lab/data-engineering-for-everybody"
+      issue-term: "pathname"
   
 sphinx:
   config:
