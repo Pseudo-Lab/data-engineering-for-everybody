@@ -1,22 +1,30 @@
 # 참고자료
 
-## 1. 클라우드 컴퓨팅 기본 개념
+## 8.1. 클라우드 컴퓨팅 기본 개념
 
-[An intro to Cloud Computing for Data Scientists and Data Engineers](https://medium.com/analytics-vidhya/an-intro-to-cloud-computing-for-data-scientists-and-data-engineers-96d85b4852de)
+![Appendix Cloud Computing](./images/appendix_cloud_services.png)
 
-![자동차로 비유하면 클라우드는 렌탈카와 유사하다고 할 수 있습니다\](Week%209%20Cloud%20Computing%20and%20Data%20Engineering%20cbc0c4c7b69f442d91dd7d3df18509cf/Untitled%207.png)
+### 렌탈카 모델과 비교
+![Appendix Rental Car Model](./images/appendix_example_rental_car_onpremise_cloud.png)
 
-자동차로 비유하면 클라우드는 렌탈카와 유사하다고 할 수 있습니다\
+> 자동차로 비유하면 클라우드는 렌탈카와 유사하다고 할 수 있습니다
 
-![Untitled](Week%209%20Cloud%20Computing%20and%20Data%20Engineering%20cbc0c4c7b69f442d91dd7d3df18509cf/Untitled%208.png)
 
-`클라우드 서비스` :
+1. 리소스 공유: 렌탈카는 여러 사람이 공유하여 사용할 수 있는 자동차입니다. 비슷하게, 클라우드는 여러 사용자가 가상화된 리소스를 공유하여 사용할 수 있습니다. 여러 조직이나 개인이 클라우드 서비스 제공업체를 통해 컴퓨팅 리소스를 공유하고 필요에 따라 사용할 수 있습니다.
+
+2. 유연성과 확장성: 렌탈카는 필요에 따라 유연하게 대여할 수 있는 자동차입니다. 비슷하게, 클라우드는 필요에 따라 컴퓨팅 리소스를 유연하게 조정하고 확장할 수 있습니다. 클라우드는 필요한 만큼의 리소스를 제공하고, 필요가 줄면 리소스를 줄일 수 있어서 비용과 성능을 최적화할 수 있습니다.
+
+3. 관리의 간소화: 렌탈카를 이용하면 자동차의 유지보수, 보험 등의 관리를 개인이 직접 신경쓰지 않아도 됩니다. 비슷하게, 클라우드는 사용자가 인프라의 관리와 유지보수에 대해 걱정할 필요가 없습니다. 클라우드 제공업체가 서버의 관리, 보안, 업그레이드 등을 처리해줍니다.
+
+4. 사용에 따른 비용 지불: 렌탈카는 사용한 만큼의 시간 또는 거리에 대해 비용을 지불합니다. 클라우드도 사용한 만큼의 컴퓨팅 리소스에 대해 비용을 지불하는 Pay-as-you-go 모델을 제공합니다. 필요한 만큼의 리소스를 사용하고, 사용하지 않을 때는 비용을 절약할 수 있습니다.
+
+### `클라우드 서비스` :
 
 - **컴퓨팅:** 워크로드를 처리하기 위한 두뇌 제공
 - **저장:** 데이터 저장 및 저장
 - **데이터베이스:** 보다 구조화된 데이터 세트 저장
 
-`클라우드 컴퓨팅 특성` :
+### `클라우드 컴퓨팅 특성` :
 
 **1.가상화 -** 클라우드 컴퓨팅을 강화하는 기본 기술.
 
@@ -60,15 +68,16 @@
 
 피크 시간 동안 더 많은 리소스가 필요합니다. 필요에 따라 리소스 확장가능합니다.
 
-**7. 민첩성 - ****클라우드 환경은 뛰어난 민첩성을 제공
+**7. 민첩성 -** 클라우드 환경은 뛰어난 민첩성을 제공
 
  필요할 때 리소스를 쉽게 다시 적절하게 사용할 수 있습니다. 이를 통해 리소스가 필요한 시스템에 리소스를 추가하고 그렇지 않은 시스템에서 제거할 수 있습니다. 시스템을 쉽게 추가하여 용량을 확장할 수도 있습니다. 내부 클라우드 환경을 통해 내부 인프라 리소스를 더 잘 활용할 수 있습니다. 가상화를 사용하는 클라우드 인프라는 밀도와 인프라 활용률을 높이는 데 도움이 될 수 있습니다. 결과적으로 시스템이 유휴 상태일 가능성이 줄어듭니다.
 
 **8. 보안 -** 데이터의 안전한 저장 및 관리
+<br></br>
 
-### 3. **클라우드 컴퓨팅에서의 데이터 엔지니어링**
+### 8.3. **클라우드 컴퓨팅에서의 데이터 엔지니어링**
 
-### 1. 비즈니스 의사결정을 위한 데이터 파이프라인(KPI)
+#### 1) 비즈니스 의사결정을 위한 데이터 파이프라인(KPI)
 
 - Apache Superset
 - dbt
@@ -80,25 +89,25 @@
 
 [Apache Superset: A hidden gem in the heaps of BI tools? - Part II.](https://blog.hiflylabs.hu/en/2021/07/13/superset2/)
 
-### 2. 통합 분석 환경 구축
+#### 2.)통합 분석 환경 구축
 
 - Google Cloud
 
 [Hyperconnect 우수사례  |  Google Cloud](https://cloud.google.com/customers/hyperconnect/?hl=ko)
 
-### 3. 추천 시스템
+#### 3) 추천 시스템
 
 - 29cm 기술블로그
 
 [GCP Recommendations AI(Retail) 서비스를 활용한 추천 서비스 구축](https://medium.com/29cm/gcp-recommendations-ai-retail-서비스를-활용한-추천-서비스-구축-eb68a0cd5d97)
 
-## 4. 멀티 클라우드 환경
+## 8.4. 멀티 클라우드 환경
 
-## 5. 멀티 클라우드 환경에서의 데이터 엔지니어링
+## 8.5. 멀티 클라우드 환경에서의 데이터 엔지니어링
 
-![하이브리드 클라우드](Week%209%20Cloud%20Computing%20and%20Data%20Engineering%20cbc0c4c7b69f442d91dd7d3df18509cf/Untitled%209.png)
+![하이브리드 클라우드](./images/appendix_hybrid_computing.png)
 
-하이브리드 클라우드
+하이브리드 클라우드에 대한 직관적인 다이어그램
 
 - [컬리의 BigQuery 도입기 - 1부](https://helloworld.kurly.com/blog/bigquery-1/)
 - [컬리의 BigQuery 도입기 - 2부](https://helloworld.kurly.com/blog/bigquery-2/)
@@ -116,6 +125,8 @@
 
 [kafka강의2 | Topic이란? Pub/Sub 구조](https://pearlluck.tistory.com/289)
 
+
 ## 읽어보면 좋은 자료
+끝으로 함께 읽어보면 좋은 자료를 첨부하고 마치도록 하겠습니다 :)
 
 [아마존 레드시프트 vs 구글 빅쿼리 | 데이터웨어하우스 비교 | 클라우드 데이터 웨어하우스 | 스마일샤크](https://www.smileshark.kr/post/aws-redshift-vs-google-bigquery-data-warehouse-comparsion-analysis)
