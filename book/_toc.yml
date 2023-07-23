@@ -62,6 +62,7 @@ chapters:
 - file: docs/7_introduction_to_apache_airflow/main_page.md
   sections:
   - file: docs/7_introduction_to_apache_airflow/7.1_airflow_theory.md
+  - file: docs/7_introduction_to_apache_airflow/7.2_airflow_executor.md
 - file: docs/8_cloud_computing_and_data_engineering/main_page.md
   sections:
   - file: docs/8_cloud_computing_and_data_engineering/8.1_cloud_computing.md
