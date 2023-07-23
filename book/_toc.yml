@@ -55,6 +55,10 @@ chapters:
     - file: docs/5_data_processing_frameworks_1/reference.md
 - file: docs/6_data_processing_frameworks_2/template_main_page.md
   sections:
+  - file: docs/6_data_processing_frameworks_2/1._Stream_processing_Framework.md
+  - file: docs/6_data_processing_frameworks_2/2.0_Apache-spark.md
+    sections:
+    - file: docs/6_data_processing_frameworks_2/2.1_Apache-spark_pratice.ipynb
   - file: docs/6_data_processing_frameworks_2/3._Apache-kafka.md
   - file: docs/6_data_processing_frameworks_2/4._Apache-storm.md
   - file: docs/6_data_processing_frameworks_2/5._Apache-flink.md
