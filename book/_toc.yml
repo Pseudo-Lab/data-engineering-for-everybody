@@ -37,20 +37,22 @@ chapters:
     - file: docs/4_data_storage/2.4_graph_store.md
 - file: docs/5_data_processing_frameworks_1/main_page.md
   sections:
-    - file: docs/5_data_processing_frameworks_1/1.1_big_data.md
-    - file: docs/5_data_processing_frameworks_1/1.2_parallel_and_distribution.md
-    - file: docs/5_data_processing_frameworks_1/1.3_cache.md
-    - file: docs/5_data_processing_frameworks_1/1.4_indexing.md
-    - file: docs/5_data_processing_frameworks_1/1.5_memory_optimization.md
-    - file: docs/5_data_processing_frameworks_1/1.6_in_memory_db.md
-    - file: docs/5_data_processing_frameworks_1/1.7_distribution_system.md
-  - file: docs/5_data_processing_frameworks_1/2_hadoop.md
+  - file: docs/5_data_processing_frameworks_1/5.1_data_processing_basic.md
     sections:
-    - file: docs/5_data_processing_frameworks_1/2.1_hadoop_ecosystem.md
-    - file: docs/5_data_processing_frameworks_1/2.2_hdfs.md
-    - file: docs/5_data_processing_frameworks_1/2.3_map_reduce.md
-    - file: docs/5_data_processing_frameworks_1/2.4_map_reduce_example.md
-    - file: docs/5_data_processing_frameworks_1/reference.md
+    - file: docs/5_data_processing_frameworks_1/5.1.1_big_data.md
+    - file: docs/5_data_processing_frameworks_1/5.1.2_parallel_and_distribution.md
+    - file: docs/5_data_processing_frameworks_1/5.1.3_cache.md
+    - file: docs/5_data_processing_frameworks_1/5.1.4_indexing.md
+    - file: docs/5_data_processing_frameworks_1/5.1.5_memory_optimization.md
+    - file: docs/5_data_processing_frameworks_1/5.1.6_in_memory_db.md
+    - file: docs/5_data_processing_frameworks_1/5.1.7_distribution_system.md
+  - file: docs/5_data_processing_frameworks_1/5.2_hadoop.md
+    sections:
+    - file: docs/5_data_processing_frameworks_1/5.2.1_hadoop_ecosystem.md
+    - file: docs/5_data_processing_frameworks_1/5.2.2_hdfs.md
+    - file: docs/5_data_processing_frameworks_1/5.2.3_map_reduce.md
+    - file: docs/5_data_processing_frameworks_1/5.2.4_map_reduce_example.md
+  - file: docs/5_data_processing_frameworks_1/5.3_reference.md
 - file: docs/6_data_processing_frameworks_2/template_main_page.md
   sections:
   - file: docs/6_data_processing_frameworks_2/3._Apache-kafka.md
