@@ -1,6 +1,8 @@
-<h1 align="center">Data Engineering for Everybody</h1>
+# DE4E: Data Engineering for Everybody
+<!-- <h2 align="center">Data Engineering for Everybody</h2> -->
 
-<p align="center"><i>DE4E: Data Engineering for Everybody by <a href="https://pseudo-lab.com/">Pseudo-Lab.</a></i></p>
+<!-- <p align="center"><i>DE4E: Data Engineering for Everybody by <a href="https://pseudo-lab.com/">Pseudo-Lab.</a></i></p> -->
+<h4 align="center"><i>DE4E: Data Engineering for Everybody by <a href="https://pseudo-lab.com/">Pseudo-Lab.</a></i></h4>
 
 <div align="center">
 <a href="https://pseudo-lab.com/"><img src="https://img.shields.io/badge/-PseudoLab-565CD8" alt="Pseudo Lab"/></a>
@@ -44,15 +46,15 @@ click the above will guide you <a src='https://pseudo-lab.github.io/data-enginee
 
 <h2>Contents</h2>
 
-* [Self-Check List]()
-* [Session 1. Introduction to Data Engineering]()
-* [Session 2. Data Sources and Data Collection]()
-* [Session 3. Data Transformation and Cleaning]()
-* [Session 4. Data Storage]()
-* [Session 5. Data Processing Frameworks]()
-* [Session 6. Data Processing Frameworks II]()
+* [Self-Check List](https://pseudo-lab.github.io/data-engineering-for-everybody/docs/0_checklist/list.html)
+* [Session 1. Introduction to Data Engineering](https://pseudo-lab.github.io/data-engineering-for-everybody/docs/1_introduction_to_data_engineering/main_page.html)
+* [Session 2. Data Sources and Data Collection](https://pseudo-lab.github.io/data-engineering-for-everybody/docs/2_data_source_and_data_collection/template_main_page.html)
+* [Session 3. Data Transformation and Cleaning](https://pseudo-lab.github.io/data-engineering-for-everybody/docs/3_data_transformation_and_cleaning/template_main_page.html)
+* [Session 4. Data Storage](https://pseudo-lab.github.io/data-engineering-for-everybody/docs/4_data_storage/main_page.html)
+* [Session 5. Data Processing Frameworks](https://pseudo-lab.github.io/data-engineering-for-everybody/docs/5_data_processing_frameworks_1/main_page.html)
+* [Session 6. Data Processing Frameworks II](https://pseudo-lab.github.io/data-engineering-for-everybody/docs/6_data_processing_frameworks_2/template_main_page.html)
 * [Session 7. Introduction to Apache Airflow]()
-* [Session 8. Cloud Computing and Data Engineering]()
+* [Session 8. Cloud Computing and Data Engineering](https://pseudo-lab.github.io/data-engineering-for-everybody/docs/8_cloud_computing_and_data_engineering/main_page.html)
 * [Capstone Project(In Progress)]()
 <br></br>
 
@@ -64,7 +66,7 @@ click the above will guide you <a src='https://pseudo-lab.github.io/data-enginee
 | 1   | 2023-04-02 |[Session 1. Introduction to Data Engineering ](url) | [이영전](https://github.com/Steve-YJ)| What is Data Engineering? | #Data Engineering #Discussion |
 | 2   | 2023-04-09 |[Session 2. Data Sources and Data Collection](url) | [이동욱](https://github.com/ehddnr301), [김세현](https://github.com/sehyun-seankim)| How can we collect data from variaty sources? | #Source Data #Data Collection #Data Type #Structured Data #Unstructured Data #Batch Data #Real-time Data |
 | 3   | 2023-04-16 |[Session 3. Data Transformation and Cleaning](url) | [이영전](https://github.com/Steve-YJ)| How can we transform data more efficiently? | #Data Processing |
-| 4   | 2023-04-30 |[Session 4. Data Storage](url) | [송윤호](https://github.com/dbsgh3344), [전희선](https://github.com/heehehe)| How can we store data more efficiently? | #Data Store #Database #Data Lake #Lakehouse #Object-Storage #NoSQL |
+| 4   | 2023-04-30 |[Session 4. Data Storage](url) | [송윤호](https://github.com/dbsgh2344), [전희선](https://github.com/heehehe)| How can we store data more efficiently? | #Data Store #Database #Data Lake #Lakehouse #Object-Storage #NoSQL |
 | 5   | 2023-05-07 |[Session 5. Data Processing Frameworks](url) | [정경륜](https://github.com/ryuni-dev), [이화림](https://github.com/HWALIMLEE)| How data processing framework help us? | #Hadoop Eco-system #Parallel Computing |
 | 6   | 2023-05-14 |[Session 6. Data Processing Frameworks II](url) | [김예신](https://github.com/yesinkim), [최한승](https://github.com/Henry-choi426)| Learn about various data processing framework | #Apache Spark #Apache Kafka #Apache Storm #Apache Flink |
 | 7   | 2023-05-28 |[Session 7. Introduction to Apache Airflow](url) | 김성훈, [이희민](https://github.com/sainthm) | How can we schedule, orchestrate data processing? | #Apache Airflow #Tutorial |
