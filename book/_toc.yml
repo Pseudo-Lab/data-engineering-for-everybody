@@ -30,12 +30,13 @@ chapters:
     - file: docs/4_data_storage/1.3_data_lake.md
     - file: docs/4_data_storage/1.4_data_lakehouse.md
     - file: docs/4_data_storage/1.5_data_pipeline_example.md
-  - file: docs/4_data_storage/2_databases.md
+  - file: docs/4_data_storage/4.2_databases.md
     sections:
-    - file: docs/4_data_storage/2.1_key_value_store.md
-    - file: docs/4_data_storage/2.2_wide_column_store.md
-    - file: docs/4_data_storage/2.3_document_store.md
-    - file: docs/4_data_storage/2.4_graph_store.md
+    - file: docs/4_data_storage/4.2.1_key_value_store.md
+    - file: docs/4_data_storage/4.2.2_wide_column_store.md
+    - file: docs/4_data_storage/4.2.3_document_store.md
+    - file: docs/4_data_storage/4.2.4_graph_store.md
+  - file: docs/4_data_storage/4.3_references.md
 - file: docs/5_data_processing_frameworks_1/main_page.md
   sections:
   - file: docs/5_data_processing_frameworks_1/1.1_big_data.md
@@ -66,4 +67,3 @@ chapters:
   - file: docs/8_cloud_computing_and_data_engineering/8.4_use_case_cloud_dataengineering.md
   - file: docs/8_cloud_computing_and_data_engineering/8.5_multi_cloud_dataengineering.md
   - file: docs/8_cloud_computing_and_data_engineering/reference.md
-
