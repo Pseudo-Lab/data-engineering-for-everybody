@@ -1,0 +1,19 @@
+name: Continuous Integration Test
+
+on: pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          pip install jupyter-book
+
+      - name: Build Test
+        run: |
+          jupyter-book build book
