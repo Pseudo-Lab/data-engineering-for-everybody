@@ -7,6 +7,9 @@
     - [https://blog.hwahae.co.kr/all/tech/9409](https://blog.hwahae.co.kr/all/tech/9409) (영전님께서 올려주셨던 화해 블로그)
     - [https://www.slideshare.net/zzsza/bigquery-147073606](https://www.slideshare.net/zzsza/bigquery-147073606)
     - [https://www.guru99.com/star-snowflake-data-warehousing.html](https://www.guru99.com/star-snowflake-data-warehousing.html)
+- Object Storage 관련
+    - [https://cloud.google.com/learn/what-is-object-storage?hl=ko#section-4](https://cloud.google.com/learn/what-is-object-storage?hl=ko#section-4)
+    - [https://tech.kakao.com/2022/08/18/radix-tree-for-object-storage/](https://tech.kakao.com/2022/08/18/radix-tree-for-object-storage/)     
 - Data Lakehouse 관련
     - [http://cloudinsight.net/data/data-lakehouse/](http://cloudinsight.net/data/data-lakehouse/)
 - Data Mart 관련
