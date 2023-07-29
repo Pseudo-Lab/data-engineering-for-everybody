@@ -23,7 +23,7 @@ html:
   use_repository_button: true
   comments:
     utterances:
-      repo: "Pseudo-Lab/data-engineering-for-everybody"
+      repo: "yesinkim/data-engineering-for-everybody"
 
 # #######################################################################################
 # Interact link settings
