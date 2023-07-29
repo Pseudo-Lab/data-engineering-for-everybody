@@ -3,7 +3,7 @@
 title : Data Engineering for Everybody
 author: PseudoLab
 logo: 'PseudoLab_logo.png'
-copyright: 2023
+copyright: 3000
 
 # Short description about the book
 description: >-
@@ -14,16 +14,6 @@ description: >-
 execute:
   execute_notebooks           : off
 
-#######################################################################################
-# HTML-specific settings
-html:
-  home_page_in_navbar         : false
-  favicon: 'PseudoLab_logo.png'
-  use_issues_button: true
-  use_repository_button: true
-  comments:
-    utterances:
-      repo: "yesinkim/data-engineering-for-everybody"
 
 # #######################################################################################
 # Interact link settings
@@ -48,3 +38,14 @@ sphinx:
 parse:
   myst_enable_extensions:
     - html_image
+
+#######################################################################################
+# HTML-specific settings
+html:
+  home_page_in_navbar         : false
+  favicon: 'PseudoLab_logo.png'
+  use_issues_button: true
+  use_repository_button: true
+  comments:
+    utterances:
+      repo: "yesinkim/data-engineering-for-everybody"
