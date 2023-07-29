@@ -18,6 +18,12 @@ execute:
 # HTML-specific settings
 html:
   home_page_in_navbar         : false
+  favicon: 'PseudoLab_logo.png'
+  use_issues_button: true
+  use_repository_button: true
+  comments:
+    utterances:
+      repo: "Pseudo-Lab/data-engineering-for-everybody"
 
 # #######################################################################################
 # Interact link settings
@@ -33,15 +39,7 @@ latex:
   latex_engine                : "xelatex"
   latex_documents:
     targetname: book.tex
-    
-html:
-  favicon: 'PseudoLab_logo.png'
-  use_issues_button: true
-  use_repository_button: true
-  comments:
-    utterances:
-      repo: "Pseudo-Lab/data-engineering-for-everybody"
-  
+
 sphinx:
   config:
     html_js_files:
