@@ -75,3 +75,13 @@
 * Parallel computing
 * Introduction to Cloud Computing
 <br></br>
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Pseudo-Lab/data-engineering-for-everybody"
+        issue-term="pathname"
+        label="comments"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>

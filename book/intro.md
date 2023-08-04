@@ -89,3 +89,13 @@ click the above will guide you <a src='https://pseudo-lab.github.io/data-enginee
 <h2>License 🗞</h2>
 
 This project is licensed under [MIT](https://opensource.org/licenses/MIT) license.
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Pseudo-Lab/data-engineering-for-everybody"
+        issue-term="pathname"
+        label="comments"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>

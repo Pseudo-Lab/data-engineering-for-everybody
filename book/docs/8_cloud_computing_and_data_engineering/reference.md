@@ -130,3 +130,13 @@
 끝으로 함께 읽어보면 좋은 자료를 첨부하고 마치도록 하겠습니다 :)
 
 [아마존 레드시프트 vs 구글 빅쿼리 | 데이터웨어하우스 비교 | 클라우드 데이터 웨어하우스 | 스마일샤크](https://www.smileshark.kr/post/aws-redshift-vs-google-bigquery-data-warehouse-comparsion-analysis)
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Pseudo-Lab/data-engineering-for-everybody"
+        issue-term="pathname"
+        label="comments"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>

@@ -121,3 +121,13 @@
 |---|---|---|
 |10001|가짜연구소 입장권|제한없음|
 |10002|DE4E 스터디 입장권|가짜연구소 소속인원|
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Pseudo-Lab/data-engineering-for-everybody"
+        issue-term="pathname"
+        label="comments"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>

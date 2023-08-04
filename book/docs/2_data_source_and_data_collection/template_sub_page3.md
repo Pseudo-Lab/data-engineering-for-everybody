@@ -50,3 +50,13 @@
     - 하지만 `A단계`를 집계함과 동시에 B단계를 집계한다면 B단계의 결과가 올바르지 않을 수 있습니다.
 - 이처럼 `C단계`에 해당하는 결과물을 도출해내기 위해 선행되어야 하는 `A,B단계`를 잘 고려하여야 합니다.
 - 이처럼 최종결과물을 빠르고 정확하게 도출해내기위한 데이터의 흐름은 어떠한지, 어떤 방법이 있는지 적절히 고려해야합니다.
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Pseudo-Lab/data-engineering-for-everybody"
+        issue-term="pathname"
+        label="comments"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>

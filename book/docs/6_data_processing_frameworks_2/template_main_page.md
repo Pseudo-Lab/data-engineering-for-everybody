@@ -11,3 +11,13 @@
   * 아파치 카프카
   * 아파치 스톰
   * 아파치 플링크
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Pseudo-Lab/data-engineering-for-everybody"
+        issue-term="pathname"
+        label="comments"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>

@@ -112,3 +112,13 @@ ORDER BY QTY_INCREASE_RATE, QTY_2011 DESC
 - 비교적 큰 데이터를 다루게 되기때문에 Network IO비용을 고려해야합니다.
     - Source Data가 있는곳은 북미지역인데, 내 ETL에 사용될 VM은 Korea Central에 위치한다면 물리적거리가 멀기때문에 IO비용이 더 나올수 있게됩니다.
 - 얼마만큼의 데이터를, 얼마만큼의 주기로 데이터를 가져와야 하는지 결정하여야 합니다.
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Pseudo-Lab/data-engineering-for-everybody"
+        issue-term="pathname"
+        label="comments"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
