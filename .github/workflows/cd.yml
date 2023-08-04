@@ -1,0 +1,24 @@
+name: Continuous Delivery
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          pip install jupyter-book
+          pip install ghp-import
+
+      - name: Build and deploy
+        run: |
+          jupyter-book build book
+          ghp-import -npf book/_build/html -m "${{ github.event.head_commit.message }}"
