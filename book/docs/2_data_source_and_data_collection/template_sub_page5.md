@@ -34,3 +34,12 @@
 - 인덱스가 없는 경우에 비해서 성능이 크게 나아지지 않았음을 볼 수 있습니다.
 - Brin Index의 경우엔 인덱스가 없는경우보다 오히려 느려졌음을 볼 수 있습니다.
 
+
+<script src="https://utteranc.es/client.js"
+        repo="Pseudo-Lab/data-engineering-for-everybody"
+        issue-term="pathname"
+        label="comments"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>

@@ -31,3 +31,13 @@
 #데이터 품질(Data Quality)
 #데이터 계보(Data Lineage)<br></br> 
 #실제 사례 공유
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Pseudo-Lab/data-engineering-for-everybody"
+        issue-term="pathname"
+        label="comments"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>

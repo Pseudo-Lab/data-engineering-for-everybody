@@ -14,3 +14,13 @@
   * 데이터 파이프라인 구축
   * 데이터 처리 방식
   * 데이터 엔지니어링 프로세스
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Pseudo-Lab/data-engineering-for-everybody"
+        issue-term="pathname"
+        label="comments"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>

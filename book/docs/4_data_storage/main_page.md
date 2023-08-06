@@ -12,3 +12,13 @@
   * 데이터 레이크하우스
   * 객체 저장소
   * NoSQL
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Pseudo-Lab/data-engineering-for-everybody"
+        issue-term="pathname"
+        label="comments"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>

@@ -38,9 +38,11 @@ html:
   favicon: 'PseudoLab_logo.png'
   use_issues_button: true
   use_repository_button: true
-  comments:
-    utterances:
-      repo: "Pseudo-Lab/data-engineering-for-everybody"
+
+comments:
+  provider: "utterances"
+  utterances:
+    repo: "Pseudo-Lab/data-engineering-for-everybody"
   
 sphinx:
   config:

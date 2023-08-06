@@ -43,3 +43,13 @@
 ### IoT Device Data
 
 - MQTT(MQ Telemetry Transport)등의 오버헤드가 작은 프로토콜로 데이터를 전송한다는 특징이 있습니다.
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Pseudo-Lab/data-engineering-for-everybody"
+        issue-term="pathname"
+        label="comments"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
