@@ -18,6 +18,7 @@ chapters:
   - file: docs/2_data_source_and_data_collection/2.3_consideration_for_data_collection.md
   - file: docs/2_data_source_and_data_collection/2.4_how_to_processing_data.md
   - file: docs/2_data_source_and_data_collection/2.5_index_practice.md
+  - file: docs/2_data_source_and_data_collection/2.6_reference.md
 - file: docs/3_data_transformation_and_cleaning/template_main_page.md
   sections:
   - file: docs/3_data_transformation_and_cleaning/template_sub_page.md
@@ -65,6 +66,7 @@ chapters:
   - file: docs/6_data_processing_frameworks_2/6.4._Apache-storm.md
   - file: docs/6_data_processing_frameworks_2/6.5._Apache-flink.md
   - file: docs/6_data_processing_frameworks_2/6.6._Appendix.md
+  - file: docs/6_data_processing_frameworks_2/6.7._reference.md
 - file: docs/7_introduction_to_apache_airflow/main_page.md
   sections:
   - file: docs/7_introduction_to_apache_airflow/7.1_airflow_theory.md
@@ -81,4 +83,4 @@ chapters:
   - file: docs/8_cloud_computing_and_data_engineering/8.3_cloud_computing_data_engineering.md
   - file: docs/8_cloud_computing_and_data_engineering/8.4_use_case_cloud_dataengineering.md
   - file: docs/8_cloud_computing_and_data_engineering/8.5_multi_cloud_dataengineering.md
-  - file: docs/8_cloud_computing_and_data_engineering/reference.md
+  - file: docs/8_cloud_computing_and_data_engineering/8.6_reference.md
