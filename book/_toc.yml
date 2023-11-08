@@ -31,11 +31,7 @@ chapters:
   - file: docs/4_data_storage/4.5_data_lakehouse.md
   - file: docs/4_data_storage/4.6_data_pipeline_example.md
   - file: docs/4_data_storage/4.7_databases.md
-  - file: docs/4_data_storage/4.8_key_value_store.md
-  - file: docs/4_data_storage/4.9_wide_column_store.md
-  - file: docs/4_data_storage/4.10_document_store.md
-  - file: docs/4_data_storage/4.11_graph_store.md
-  - file: docs/4_data_storage/4.12_references.md
+  - file: docs/4_data_storage/4.8_reference.md
 - file: docs/5_data_processing_frameworks_1/main_page.md
   sections:
   - file: docs/5_data_processing_frameworks_1/5.1_data_processing_basic.md
