@@ -1,0 +1,3 @@
+[submodule "project/job_trend"]
+	path = project/job_trend
+	url = git@github.com:heehehe/job_trend.git
