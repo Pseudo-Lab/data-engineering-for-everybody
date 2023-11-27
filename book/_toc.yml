@@ -77,3 +77,10 @@ chapters:
   - file: docs/8_cloud_computing_and_data_engineering/8.4_use_case_cloud_dataengineering.md
   - file: docs/8_cloud_computing_and_data_engineering/8.5_multi_cloud_dataengineering.md
   - file: docs/8_cloud_computing_and_data_engineering/8.6_reference.md
+- file: docs/p_movieFlix/main_page.md
+  sections:
+  - file: docs/p_movieFlix/1_architecture.md
+  - file: docs/p_movieFlix/2_infra.md
+  - file: docs/p_movieFlix/3_data_generation.md
+  - file: docs/p_movieFlix/4_data_flow.md
+  - file: docs/p_movieFlix/5_monitoring.md
