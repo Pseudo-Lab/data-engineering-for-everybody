@@ -26,7 +26,7 @@
 ## Lambda Architecture란
 
 - 데이터를 처리함에 있어서 스트림과 배치라는 두 목적지로 전송하여 Batch Layer를 통해 대용량 데이터 처리를, Speed Layer를 통해 배치 레이어에서 생기는 갭을 채우는 아키텍처 입니다.
-- 본 프로젝트에서는 구현상 편의를 위해 동일한 Source Table과 Target Table을 Kafka와 Airflow가 바라보게 구현되어 `실시간성`과 `배치를통한 데이터 부정확성 보완`을 구현하였습니다.
+- ⚠️ 본 프로젝트에서는 구현상 편의를 위해 동일한 Source Table과 Target Table을 Kafka와 Airflow가 바라보게 구현되어 `실시간성`과 `배치를통한 데이터 부정확성 보완`을 구현하였습니다.
 
 - 람다 아키텍처의 장점
     - `데이터 정확성`: Batch Layer를 통해 Speed Layer의 데이터 보정

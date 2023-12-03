@@ -27,7 +27,7 @@
 
 ## Data
 
-- [MovieLen](https://grouplens.org/datasets/movielens/)
+- [MovieLens](https://grouplens.org/datasets/movielens/)
 
 <script src="https://utteranc.es/client.js"
         repo="Pseudo-Lab/data-engineering-for-everybody"

@@ -7,6 +7,8 @@
 ## Airflow
 
 - 람다 아키텍처에서 Batch Layer를 담당합니다.
+    - 1시간마다 한번 테이블에서 kafka를 통해 생성된 데이터를 Delete 하고 Service DB에서 데이터를 읽어 Insert합니다.
+    - kafka를 통해 생성된 데이터의 중복, 유실을 보정하기 위한 장치입니다.
 - [Dag Repository](https://github.com/ehddnr301/MovieRecommender-DAGs)를 통해 Airflow Dag을 관리합니다.
 - `git-sync` 를 통해 Repository에 반영된 코드만 Airflow에 반영될 수 있도록 합니다.
 
@@ -49,6 +51,8 @@ for filename in os.listdir("/opt/airflow/dags/etl-dags"):
 
 ## Kafka
 
+- 람다 아키텍처에서 Batch Layer를 담당합니다.
+    - Airflow로 구현하기에 적절하지 않은 실시간 데이터 생성을 담당합니다.
 - Source Connector를 사용하여 Source DB의 데이터를 브로커의 토픽으로 publish 합니다.
 - Sink Connector를 사용하여 토픽의 데이터를 Subscribe하여 Target DB에 전달합니다.
 
