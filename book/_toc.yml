@@ -77,6 +77,16 @@ chapters:
   - file: docs/8_cloud_computing_and_data_engineering/8.4_use_case_cloud_dataengineering.md
   - file: docs/8_cloud_computing_and_data_engineering/8.5_multi_cloud_dataengineering.md
   - file: docs/8_cloud_computing_and_data_engineering/8.6_reference.md
+- file: docs/9_kafka_zero_to_hero/main_page.md
+  sections:
+  - file: docs/9_kafka_zero_to_hero/9_1_kafka_intro.md
+    sections:
+    - file: docs/9_kafka_zero_to_hero/9_1_kafka_intro/9_1_1_architecture.md
+    - file: docs/9_kafka_zero_to_hero/9_1_kafka_intro/9_1_2_topic_and_partition.md
+    - file: docs/9_kafka_zero_to_hero/9_1_kafka_intro/9_1_3_partition_and_producer_consumer.md
+    - file: docs/9_kafka_zero_to_hero/9_1_kafka_intro/9_1_4_kafka_performance.md
+    - file: docs/9_kafka_zero_to_hero/9_1_kafka_intro/9_1_5_kafka_disaster_recovery.md
+    - file: docs/9_kafka_zero_to_hero/9_1_kafka_intro/9_1_6_reference.md
 - file: docs/p_movieFlix/main_page.md
   sections:
   - file: docs/p_movieFlix/1_architecture.md
