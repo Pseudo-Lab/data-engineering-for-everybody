@@ -10,10 +10,10 @@
   - [신진수]()
   - [이동욱](https://github.com/ehddnr301)
   - [이영전]()
-  - [이호민]()
+  - [이호민](https://github.com/DShomin)
   - [이힘찬](https://github.com/ssilb4)
   - [장승호](https://github.com/jason9865)
-  - [홍지영​​]()
+  - [홍지영​​](https://github.com/jhongy1994)
 
 - 스터디 목표
   1. Kafka 이론에 대해 사용가능한 정도로 이해하기
