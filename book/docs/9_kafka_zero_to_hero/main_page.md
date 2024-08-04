@@ -12,7 +12,7 @@
   - [이영전]()
   - [이호민]()
   - [이힘찬](https://github.com/ssilb4)
-  - [장승호]()
+  - [장승호](https://github.com/jshEIT)
   - [홍지영​​]()
 
 - 스터디 목표
