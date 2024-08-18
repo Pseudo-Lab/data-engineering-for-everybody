@@ -5,7 +5,7 @@
 - 참가 스터디원
 
   - [김승규]()
-  - [김승태]()
+  - [김승태](https://github.com/RyanKor)
   - [김예진](https://github.com/Yejining)
   - [신진수]()
   - [이동욱](https://github.com/ehddnr301)
