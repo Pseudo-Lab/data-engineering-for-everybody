@@ -1,0 +1,673 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>🗂️ 참고자료(Reference) &#8212; Data Engineering for Everybody</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/4_data_storage/4.8_reference';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../../_static/PseudoLab_logo.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="5. Data Processing Frameworks I" href="../5_data_processing_frameworks_1/main_page.html" />
+    <link rel="prev" title="4.7 Databases" href="4.7_databases.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/PseudoLab_logo.png" class="logo__image only-light" alt="Data Engineering for Everybody - Home"/>
+    <script>document.write(`<img src="../../_static/PseudoLab_logo.png" class="logo__image only-dark" alt="Data Engineering for Everybody - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    DE4E: Data Engineering for Everybody
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../0_checklist/list.html">📝 Check List</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../1_introduction_to_data_engineering/main_page.html">1. Introduction to Data Engineering</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../1_introduction_to_data_engineering/1.0_about_bigdata.html">우리는 빅데이터 시대에 살고 있습니다</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_introduction_to_data_engineering/1.1_what_is_data_engineering.html">1.1. 데이터 엔지니어링이란 무엇일까?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_introduction_to_data_engineering/1.2_data_engineering_use_case.html">1.2. 사례를 통해 알아보는 데이터 엔지니어링</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_introduction_to_data_engineering/1.3_modern_data_engineering.html">1.3. 데이터 엔지니어는 어떻게 진화하고 있을까?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_introduction_to_data_engineering/1.4_further_more.html">1.4. 데이터 엔지니어는 어떤 고민을 할까?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_introduction_to_data_engineering/1.5_recap.html">Recap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_introduction_to_data_engineering/1.6_reference.html"><code class="docutils literal notranslate"><span class="pre">🗂️ 참고자료(Reference)</span></code></a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../2_data_source_and_data_collection/template_main_page.html">2. Data Source and Data Collection</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../2_data_source_and_data_collection/2.1_data_covered_by_data_engineer.html">2.1 데이터 엔지니어가 다루는 데이터</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_data_source_and_data_collection/2.2_how_to_collect_data.html">2.2 데이터를 수집하는 방법</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_data_source_and_data_collection/2.3_consideration_for_data_collection.html">2.3 데이터 수집에서의 고려할 점</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_data_source_and_data_collection/2.4_how_to_processing_data.html">2.4 데이터 처리방식 알아보기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_data_source_and_data_collection/2.5_index_practice.html">2.5 💻 Index 실습</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_data_source_and_data_collection/2.6_reference.html"><code class="docutils literal notranslate"><span class="pre">🗂️ 참고자료(Reference)</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3_data_transformation_and_cleaning/template_main_page.html">3. Data Transformation and Cleaning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_data_transformation_and_cleaning/template_sub_page.html">(소제목)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="main_page.html">4. Data Storage</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="4.1_data_warehouse_lake_and_lakehouse.html">4.1 data warehouse / data lake / data lakehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.2_data_warehouse.html">4.2 Data Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.3_data_mart.html">4.3 Data Mart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.4_data_lake.html">4.4 Data Lake</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.5_data_lakehouse.html">4.5 Data Lakehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.6_data_pipeline_example.html">4.6 💻 Data Pipeline 실습</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.7_databases.html">4.7 Databases</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">🗂️ 참고자료(Reference)</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../5_data_processing_frameworks_1/main_page.html">5. Data Processing Frameworks I</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../5_data_processing_frameworks_1/5.1_data_processing_basic.html">5.1 Data Processing을 위한 기초 지식</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_data_processing_frameworks_1/5.2_big_data.html">5.2 대규모 데이터 처리 필요성과 프레임워크</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_data_processing_frameworks_1/5.3_parallel_and_distribution.html">5.3 분산처리와 병렬처리</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_data_processing_frameworks_1/5.4_cache.html">5.4 캐싱(Cache + ing)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_data_processing_frameworks_1/5.5_indexing.html">5.5 인덱싱</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_data_processing_frameworks_1/5.6_memory_optimization.html">5.6 메모리 최적화</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_data_processing_frameworks_1/5.7_in_memory_db.html">5.7 인메모리 디비란?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_data_processing_frameworks_1/5.8_distribution_system.html">5.8 분산 시스템</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_data_processing_frameworks_1/5.9_hadoop.html">5.9 Hadoop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_data_processing_frameworks_1/5.10_hadoop_ecosystem.html">5.10 Hadoop Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_data_processing_frameworks_1/5.11_hdfs.html">5.11 HDFS</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../5_data_processing_frameworks_1/5.12_map_reduce.html">5.12 MapReduce</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../5_data_processing_frameworks_1/5.12.1_map_reduce_example.html">💻 MapReduce 실습</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_data_processing_frameworks_1/5.13_reference.html"><code class="docutils literal notranslate"><span class="pre">🗂️ 참고자료(Reference)</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../6_data_processing_frameworks_2/template_main_page.html">6. Data Processing Frameworks II</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../6_data_processing_frameworks_2/6.1._Stream_processing_Framework.html">6.1 Stream Processing Framework</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../6_data_processing_frameworks_2/6.2_Apache-spark.html">6.2 아파치 스파크(Apache Spark)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../6_data_processing_frameworks_2/6.2.1_Apache-spark_pratice.html">💻 실습: 아파치 스파크</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../6_data_processing_frameworks_2/6.3._Apache-kafka.html">6.3 아파치 카프카 (Apache Kafka)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../6_data_processing_frameworks_2/6.4._Apache-storm.html">6.4 아파치 스톰 (Apache Storm)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../6_data_processing_frameworks_2/6.5._Apache-flink.html">6.5 아파치 플링크 (Apache Flink)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../6_data_processing_frameworks_2/6.6._Appendix.html">6.6 데이터 처리방법 비교</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../6_data_processing_frameworks_2/6.7_reference.html"><code class="docutils literal notranslate"><span class="pre">🗂️ 참고자료(Reference)</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../7_introduction_to_apache_airflow/main_page.html">7. Introduction to Apache Airflow</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../7_introduction_to_apache_airflow/7.1_airflow_theory.html">7.1 Introduction to Apache Airflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../7_introduction_to_apache_airflow/7.2_airflow_executor.html">7.2 Airflow Executor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../7_introduction_to_apache_airflow/7.3_airflow_use_cases.html">7.3 Airflow Use Cases</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../7_introduction_to_apache_airflow/7.4_airflow_hands_on.html">7.4 Airflow Hands-On</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../7_introduction_to_apache_airflow/7.4.1_airflow_hands_on.html">💻 실습: Airflow</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../7_introduction_to_apache_airflow/7.5_reference.html"><code class="docutils literal notranslate"><span class="pre">🗂️ 참고자료(Reference)</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../8_cloud_computing_and_data_engineering/main_page.html">8. Cloud Computing and Data Enginnering</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../8_cloud_computing_and_data_engineering/8.1_cloud_computing.html">8.1 Cloud Computing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../8_cloud_computing_and_data_engineering/8.2_data_engineering.html">8.2 Data Engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../8_cloud_computing_and_data_engineering/8.3_cloud_computing_data_engineering.html">8.3 클라우드 컴퓨팅에서의 데이터 엔지니어링과 프로세스들</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../8_cloud_computing_and_data_engineering/8.4_use_case_cloud_dataengineering.html">8.4. <strong>사례 학습 - 클라우드 컴퓨팅에서의 데이터 엔지니어링</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../8_cloud_computing_and_data_engineering/8.5_multi_cloud_dataengineering.html">8.5. <strong>멀티 클라우드 환경에서의 데이터 엔지니어링</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../8_cloud_computing_and_data_engineering/8.6_reference.html"><code class="docutils literal notranslate"><span class="pre">🗂️ 참고자료(Reference)</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../9_kafka_zero_to_hero/main_page.html">9. Kafka Zero-To-Hero</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../9_kafka_zero_to_hero/9_1_kafka_intro.html">9.1. Kafka Intro</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../9_kafka_zero_to_hero/9_1_kafka_intro/9_1_1_architecture.html">카프카 기본 구조</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../9_kafka_zero_to_hero/9_1_kafka_intro/9_1_2_topic_and_partition.html">토픽과 파티션</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../9_kafka_zero_to_hero/9_1_kafka_intro/9_1_3_partition_and_producer_consumer.html">파티션과 프로듀서 &amp; 컨슈머</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../9_kafka_zero_to_hero/9_1_kafka_intro/9_1_4_kafka_performance.html">카프카 성능</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../9_kafka_zero_to_hero/9_1_kafka_intro/9_1_5_kafka_disaster_recovery.html">카프카 장애대응</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../9_kafka_zero_to_hero/9_1_kafka_intro/9_1_6_reference.html"><code class="docutils literal notranslate"><span class="pre">🗂️ 참고자료(Reference)</span></code></a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../p_movieFlix/main_page.html">🚀 Project - MovieFlix</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../p_movieFlix/1_architecture.html">1. 아키텍처 설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../p_movieFlix/2_infra.html">2. Infra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../p_movieFlix/3_data_generation.html">3. 데이터 생성</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../p_movieFlix/4_data_flow.html">4. Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../p_movieFlix/5_monitoring.html">5. Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../p_movieFlix/6_reference.html"><code class="docutils literal notranslate"><span class="pre">🗂️ 참고자료(Reference)</span></code></a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/pseudo-lab/data-engineering-for-everybody" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/pseudo-lab/data-engineering-for-everybody/issues/new?title=Issue%20on%20page%20%2Fdocs/4_data_storage/4.8_reference.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/docs/4_data_storage/4.8_reference.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>🗂️ 참고자료(Reference)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-warehouse-data-lake-data-lakehouse">Data Warehouse / Data Lake / Data Lakehouse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#databases">Databases</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">도서</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="reference">
+<h1><code class="docutils literal notranslate"><span class="pre">🗂️ 참고자료(Reference)</span></code><a class="headerlink" href="#reference" title="Link to this heading">#</a></h1>
+<section id="data-warehouse-data-lake-data-lakehouse">
+<h2>Data Warehouse / Data Lake / Data Lakehouse<a class="headerlink" href="#data-warehouse-data-lake-data-lakehouse" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://blog.hwahae.co.kr/all/tech/9409">https://blog.hwahae.co.kr/all/tech/9409</a></p></li>
+<li><p><a class="reference external" href="https://www.slideshare.net/zzsza/bigquery-147073606">https://www.slideshare.net/zzsza/bigquery-147073606</a></p></li>
+<li><p><a class="reference external" href="https://www.guru99.com/star-snowflake-data-warehousing.html">https://www.guru99.com/star-snowflake-data-warehousing.html</a></p></li>
+<li><p>Object Storage 관련</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/learn/what-is-object-storage?hl=ko#section-4">https://cloud.google.com/learn/what-is-object-storage?hl=ko#section-4</a></p></li>
+<li><p><a class="reference external" href="https://tech.kakao.com/2022/08/18/radix-tree-for-object-storage/">https://tech.kakao.com/2022/08/18/radix-tree-for-object-storage/</a></p></li>
+</ul>
+</li>
+<li><p>Data Lakehouse: <a class="reference external" href="http://cloudinsight.net/data/data-lakehouse/">http://cloudinsight.net/data/data-lakehouse/</a></p></li>
+<li><p>Data Mart: <a class="reference external" href="https://aws.amazon.com/ko/what-is/data-mart/">https://aws.amazon.com/ko/what-is/data-mart/</a></p></li>
+</ul>
+</section>
+<section id="databases">
+<h2>Databases<a class="headerlink" href="#databases" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://db-engines.com/en/ranking">https://db-engines.com/en/ranking</a></p></li>
+<li><p><a class="reference external" href="https://app.datacamp.com/learn/courses/introduction-to-relational-databases-in-sql">https://app.datacamp.com/learn/courses/introduction-to-relational-databases-in-sql</a></p></li>
+<li><p><a class="reference external" href="https://app.datacamp.com/learn/courses/database-design">https://app.datacamp.com/learn/courses/database-design</a></p></li>
+<li><p><a class="reference external" href="https://app.datacamp.com/learn/projects/1613">https://app.datacamp.com/learn/projects/1613</a></p></li>
+<li><p><a class="reference external" href="https://sungchul-p.github.io/db-on-k8s-vitess-overview">https://sungchul-p.github.io/db-on-k8s-vitess-overview</a></p></li>
+<li><p><a class="reference external" href="https://app.datacamp.com/learn/courses/nosql-concepts">https://app.datacamp.com/learn/courses/nosql-concepts</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=Q_9cFgzZr8Q">https://www.youtube.com/watch?v=Q_9cFgzZr8Q</a></p></li>
+<li><p>MongoDB: <a class="reference external" href="https://app.datacamp.com/learn/courses/introduction-to-using-mongodb-for-data-science-with-python">https://app.datacamp.com/learn/courses/introduction-to-using-mongodb-for-data-science-with-python</a></p></li>
+<li><p>Neo4j: <a class="reference external" href="https://wikidocs.net/book/3724">https://wikidocs.net/book/3724</a></p></li>
+</ul>
+</section>
+<section id="id1">
+<h2>도서<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://search.shopping.naver.com/book/catalog/32441632131?cat_id=50010586&amp;amp;frm=PBOKPRO&amp;amp;query=%EB%B9%85%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC+%EC%A7%80%ED%83%B1%ED%95%98%EB%8A%94+%EA%B8%B0%EC%88%A0&amp;amp;NaPm=ct%3Dlke7osco%7Cci%3D193a2eedb61d19ef296a4a52def98eeddd081de4%7Ctr%3Dboknx%7Csn%3D95694%7Chk%3D879abc7fed44ccc0f5574cb0f8d5bd34aa4f88f2">빅데이터를 지탱하는 기술</a></p></li>
+<li><p><a class="reference external" href="https://search.shopping.naver.com/book/catalog/32466573690?cat_id=50010586&amp;amp;frm=PBOKPRO&amp;amp;query=%EB%8D%B0%EC%9D%B4%ED%84%B0+%EC%A4%91%EC%8B%AC+%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98+%EC%84%A4%EA%B3%84&amp;amp;NaPm=ct%3Dlke7p5gw%7Cci%3Da3ea6fa3ac3d6b1949f4f5de9d66620ec82f2e37%7Ctr%3Dboknx%7Csn%3D95694%7Chk%3Dfbd34bd6c6b75e0e1e814117585664c6f1d752a1">데이터 중심 애플리케이션 설계</a></p></li>
+</ul>
+<script src="https://utteranc.es/client.js"
+        repo="Pseudo-Lab/data-engineering-for-everybody"
+        issue-term="pathname"
+        label="comments"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./docs/4_data_storage"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="4.7_databases.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">4.7 Databases</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../5_data_processing_frameworks_1/main_page.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">5. Data Processing Frameworks I</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-warehouse-data-lake-data-lakehouse">Data Warehouse / Data Lake / Data Lakehouse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#databases">Databases</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">도서</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By PseudoLab
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,806 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>7.1 Introduction to Apache Airflow &#8212; Data Engineering for Everybody</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/7_introduction_to_apache_airflow/7.1_airflow_theory';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../../_static/PseudoLab_logo.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="7.2 Airflow Executor" href="7.2_airflow_executor.html" />
+    <link rel="prev" title="7. Introduction to Apache Airflow" href="main_page.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/PseudoLab_logo.png" class="logo__image only-light" alt="Data Engineering for Everybody - Home"/>
+    <script>document.write(`<img src="../../_static/PseudoLab_logo.png" class="logo__image only-dark" alt="Data Engineering for Everybody - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    DE4E: Data Engineering for Everybody
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../0_checklist/list.html">📝 Check List</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../1_introduction_to_data_engineering/main_page.html">1. Introduction to Data Engineering</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../1_introduction_to_data_engineering/1.0_about_bigdata.html">우리는 빅데이터 시대에 살고 있습니다</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_introduction_to_data_engineering/1.1_what_is_data_engineering.html">1.1. 데이터 엔지니어링이란 무엇일까?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_introduction_to_data_engineering/1.2_data_engineering_use_case.html">1.2. 사례를 통해 알아보는 데이터 엔지니어링</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_introduction_to_data_engineering/1.3_modern_data_engineering.html">1.3. 데이터 엔지니어는 어떻게 진화하고 있을까?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_introduction_to_data_engineering/1.4_further_more.html">1.4. 데이터 엔지니어는 어떤 고민을 할까?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_introduction_to_data_engineering/1.5_recap.html">Recap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_introduction_to_data_engineering/1.6_reference.html"><code class="docutils literal notranslate"><span class="pre">🗂️ 참고자료(Reference)</span></code></a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../2_data_source_and_data_collection/template_main_page.html">2. Data Source and Data Collection</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../2_data_source_and_data_collection/2.1_data_covered_by_data_engineer.html">2.1 데이터 엔지니어가 다루는 데이터</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_data_source_and_data_collection/2.2_how_to_collect_data.html">2.2 데이터를 수집하는 방법</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_data_source_and_data_collection/2.3_consideration_for_data_collection.html">2.3 데이터 수집에서의 고려할 점</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_data_source_and_data_collection/2.4_how_to_processing_data.html">2.4 데이터 처리방식 알아보기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_data_source_and_data_collection/2.5_index_practice.html">2.5 💻 Index 실습</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_data_source_and_data_collection/2.6_reference.html"><code class="docutils literal notranslate"><span class="pre">🗂️ 참고자료(Reference)</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3_data_transformation_and_cleaning/template_main_page.html">3. Data Transformation and Cleaning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_data_transformation_and_cleaning/template_sub_page.html">(소제목)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../4_data_storage/main_page.html">4. Data Storage</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_data_storage/4.1_data_warehouse_lake_and_lakehouse.html">4.1 data warehouse / data lake / data lakehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_data_storage/4.2_data_warehouse.html">4.2 Data Warehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_data_storage/4.3_data_mart.html">4.3 Data Mart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_data_storage/4.4_data_lake.html">4.4 Data Lake</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_data_storage/4.5_data_lakehouse.html">4.5 Data Lakehouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_data_storage/4.6_data_pipeline_example.html">4.6 💻 Data Pipeline 실습</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_data_storage/4.7_databases.html">4.7 Databases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_data_storage/4.8_reference.html"><code class="docutils literal notranslate"><span class="pre">🗂️ 참고자료(Reference)</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../5_data_processing_frameworks_1/main_page.html">5. Data Processing Frameworks I</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../5_data_processing_frameworks_1/5.1_data_processing_basic.html">5.1 Data Processing을 위한 기초 지식</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_data_processing_frameworks_1/5.2_big_data.html">5.2 대규모 데이터 처리 필요성과 프레임워크</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_data_processing_frameworks_1/5.3_parallel_and_distribution.html">5.3 분산처리와 병렬처리</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_data_processing_frameworks_1/5.4_cache.html">5.4 캐싱(Cache + ing)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_data_processing_frameworks_1/5.5_indexing.html">5.5 인덱싱</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_data_processing_frameworks_1/5.6_memory_optimization.html">5.6 메모리 최적화</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_data_processing_frameworks_1/5.7_in_memory_db.html">5.7 인메모리 디비란?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_data_processing_frameworks_1/5.8_distribution_system.html">5.8 분산 시스템</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_data_processing_frameworks_1/5.9_hadoop.html">5.9 Hadoop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_data_processing_frameworks_1/5.10_hadoop_ecosystem.html">5.10 Hadoop Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_data_processing_frameworks_1/5.11_hdfs.html">5.11 HDFS</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../5_data_processing_frameworks_1/5.12_map_reduce.html">5.12 MapReduce</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../5_data_processing_frameworks_1/5.12.1_map_reduce_example.html">💻 MapReduce 실습</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_data_processing_frameworks_1/5.13_reference.html"><code class="docutils literal notranslate"><span class="pre">🗂️ 참고자료(Reference)</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../6_data_processing_frameworks_2/template_main_page.html">6. Data Processing Frameworks II</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../6_data_processing_frameworks_2/6.1._Stream_processing_Framework.html">6.1 Stream Processing Framework</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../6_data_processing_frameworks_2/6.2_Apache-spark.html">6.2 아파치 스파크(Apache Spark)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../6_data_processing_frameworks_2/6.2.1_Apache-spark_pratice.html">💻 실습: 아파치 스파크</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../6_data_processing_frameworks_2/6.3._Apache-kafka.html">6.3 아파치 카프카 (Apache Kafka)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../6_data_processing_frameworks_2/6.4._Apache-storm.html">6.4 아파치 스톰 (Apache Storm)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../6_data_processing_frameworks_2/6.5._Apache-flink.html">6.5 아파치 플링크 (Apache Flink)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../6_data_processing_frameworks_2/6.6._Appendix.html">6.6 데이터 처리방법 비교</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../6_data_processing_frameworks_2/6.7_reference.html"><code class="docutils literal notranslate"><span class="pre">🗂️ 참고자료(Reference)</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="main_page.html">7. Introduction to Apache Airflow</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">7.1 Introduction to Apache Airflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7.2_airflow_executor.html">7.2 Airflow Executor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7.3_airflow_use_cases.html">7.3 Airflow Use Cases</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="7.4_airflow_hands_on.html">7.4 Airflow Hands-On</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="7.4.1_airflow_hands_on.html">💻 실습: Airflow</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="7.5_reference.html"><code class="docutils literal notranslate"><span class="pre">🗂️ 참고자료(Reference)</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../8_cloud_computing_and_data_engineering/main_page.html">8. Cloud Computing and Data Enginnering</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../8_cloud_computing_and_data_engineering/8.1_cloud_computing.html">8.1 Cloud Computing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../8_cloud_computing_and_data_engineering/8.2_data_engineering.html">8.2 Data Engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../8_cloud_computing_and_data_engineering/8.3_cloud_computing_data_engineering.html">8.3 클라우드 컴퓨팅에서의 데이터 엔지니어링과 프로세스들</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../8_cloud_computing_and_data_engineering/8.4_use_case_cloud_dataengineering.html">8.4. <strong>사례 학습 - 클라우드 컴퓨팅에서의 데이터 엔지니어링</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../8_cloud_computing_and_data_engineering/8.5_multi_cloud_dataengineering.html">8.5. <strong>멀티 클라우드 환경에서의 데이터 엔지니어링</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../8_cloud_computing_and_data_engineering/8.6_reference.html"><code class="docutils literal notranslate"><span class="pre">🗂️ 참고자료(Reference)</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../9_kafka_zero_to_hero/main_page.html">9. Kafka Zero-To-Hero</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../9_kafka_zero_to_hero/9_1_kafka_intro.html">9.1. Kafka Intro</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../9_kafka_zero_to_hero/9_1_kafka_intro/9_1_1_architecture.html">카프카 기본 구조</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../9_kafka_zero_to_hero/9_1_kafka_intro/9_1_2_topic_and_partition.html">토픽과 파티션</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../9_kafka_zero_to_hero/9_1_kafka_intro/9_1_3_partition_and_producer_consumer.html">파티션과 프로듀서 &amp; 컨슈머</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../9_kafka_zero_to_hero/9_1_kafka_intro/9_1_4_kafka_performance.html">카프카 성능</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../9_kafka_zero_to_hero/9_1_kafka_intro/9_1_5_kafka_disaster_recovery.html">카프카 장애대응</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../9_kafka_zero_to_hero/9_1_kafka_intro/9_1_6_reference.html"><code class="docutils literal notranslate"><span class="pre">🗂️ 참고자료(Reference)</span></code></a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../p_movieFlix/main_page.html">🚀 Project - MovieFlix</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../p_movieFlix/1_architecture.html">1. 아키텍처 설명</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../p_movieFlix/2_infra.html">2. Infra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../p_movieFlix/3_data_generation.html">3. 데이터 생성</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../p_movieFlix/4_data_flow.html">4. Data Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../p_movieFlix/5_monitoring.html">5. Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../p_movieFlix/6_reference.html"><code class="docutils literal notranslate"><span class="pre">🗂️ 참고자료(Reference)</span></code></a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/pseudo-lab/data-engineering-for-everybody" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/pseudo-lab/data-engineering-for-everybody/issues/new?title=Issue%20on%20page%20%2Fdocs/7_introduction_to_apache_airflow/7.1_airflow_theory.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/docs/7_introduction_to_apache_airflow/7.1_airflow_theory.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>7.1 Introduction to Apache Airflow</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#airflow">Airflow 란?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><code class="docutils literal notranslate"><span class="pre">데이터</span> <span class="pre">파이프라인</span></code>을 관리하기 위한 Airflow</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Airflow의 장단점</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">장점:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">단점:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Airflow의 주요 컴포넌트</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">이외 컴포넌트</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Airflow 스케쥴링</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#backfill">백필(backfill)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dag">🛠 매일 0시 0분에 실행되는 DAG예제</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Airflow는 만능?!</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="introduction-to-apache-airflow">
+<h1>7.1 Introduction to Apache Airflow<a class="headerlink" href="#introduction-to-apache-airflow" title="Link to this heading">#</a></h1>
+<img alt="../../_images/7_1_1.png" src="../../_images/7_1_1.png" />
+<section id="airflow">
+<h2>Airflow 란?<a class="headerlink" href="#airflow" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Python 기반의 workflow tool 입니다.</p></li>
+<li><p>workflow 를 구성하는 방법을 DAG 와 task 라는 단위로 복잡하고 다양하게 구성 가능합니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Task</span></code> : airflow의 operator, etl등의 작업들이 각각의 task가 되며, task간 순서 지정이 가능합니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DAG(Directes</span> <span class="pre">Acyclic</span> <span class="pre">Graph)</span></code> : 방향성 비순환 그래프로 데이터파이프라인 하나의 단위, 하나의 DAG에는 하나 이상의 task로 구성됩니다.</p></li>
+<li><p>Airflow는 데이터 파이프라인의 태스크를 예약하고 결과를 모니터링하는 <code class="docutils literal notranslate"><span class="pre">웹</span> <span class="pre">서버</span></code>, <code class="docutils literal notranslate"><span class="pre">스케줄러</span></code> 및 <code class="docutils literal notranslate"><span class="pre">워커</span> <span class="pre">프로세스</span></code>라는 세 가지 주요 컴포넌트로 구성!</p></li>
+</ul>
+<section id="id1">
+<h3><code class="docutils literal notranslate"><span class="pre">데이터</span> <span class="pre">파이프라인</span></code>을 관리하기 위한 Airflow<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>💡 데이터 파이프라인은 <code class="docutils literal notranslate"><span class="pre">방향성</span> <span class="pre">비순환</span> <span class="pre">그래프(DAG)</span></code>에 <code class="docutils literal notranslate"><span class="pre">Task</span></code>와 이에 대한 <code class="docutils literal notranslate"><span class="pre">의존성</span></code>을 정의합니다.</p></li>
+<li><p>💡 수년간 태스크 그래프를 실행할 수 있는 여러 워크플로 관리 시스템이 개발되었고, 그 중 Airflow는 배치 지향 데이터 파이프라인 구현을 위해 특화된 주요 기능을 가지고 있습니다.</p></li>
+</ul>
+</section>
+</section>
+<section id="id2">
+<h2>Airflow의 장단점<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<section id="id3">
+<h3>장점:<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>파이썬 코드로 작성되어, 쉽고 간단하게 배치, 워크플로우 구성이 가능합니다.</p></li>
+<li><p>파이썬 기반으로 구현되어 있기 때문에, 파이썬 언어에서 구현할 수 있는 대부분의 방법을 사용하여 복잡한 커스텀 파이프라인 구축이 가능합니다.</p></li>
+<li><p>후술할 <code class="docutils literal notranslate"><span class="pre">Backfill</span></code> 기능을 사용하여 과거 데이터를 손쉽게 재처리할 수 있기 때문에 코드를 변경한 후 재생성이 필요한 데이터 재처리가 가능합니다.</p></li>
+</ul>
+</section>
+<section id="id4">
+<h3>단점:<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>반복적이거나 배치태스크에 기능초점이 맞춰져 있기 때문에, 스트리밍 데이터 처리에 적합하지 않습니다.</p></li>
+</ul>
+</section>
+</section>
+<section id="id5">
+<h2>Airflow의 주요 컴포넌트<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<img alt="../../_images/7_1_2.png" src="../../_images/7_1_2.png" />
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Airflow</span> <span class="pre">워커</span></code>: 예약된 task를 선택하고 실행합니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Airflow</span> <span class="pre">스케줄러</span></code>: DAG를 분석, 현 시점에서 DAG의 스케줄이 지난 경우 워커에 DAG의 태스크를 예약합니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Airflow</span> <span class="pre">웹서버</span></code>: 스케줄러에서 분석한 DAG를 시각화하고 DAG 실행과 결과를 환인할 수 있는 주요 인터페이스를 제공합니다.</p></li>
+</ul>
+<section id="id6">
+<h3>이외 컴포넌트<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Airflow</span> <span class="pre">database</span></code> : 최초 설치시 기본으로 sqlite가 기본으로 설치됩니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Airflow</span> <span class="pre">queue</span></code> : 멀티노드 구성인 경우에만 사용합니다.</p></li>
+</ul>
+</section>
+</section>
+<section id="id7">
+<h2>Airflow 스케쥴링<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>💡 Airflow의 스케줄 간격은 Cron구문을 활용하여 주로 설정합니다.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>크론 구문 예시</p></th>
+<th class="head"><p>설명</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0 * * * *</p></td>
+<td><p>매시간 (정시 실행)</p></td>
+</tr>
+<tr class="row-odd"><td><p>0 0 * * *</p></td>
+<td><p>매일 (자정에 실행)</p></td>
+</tr>
+<tr class="row-even"><td><p>0 0 * * 0</p></td>
+<td><p>매주 (일요일 자정에 실행)</p></td>
+</tr>
+<tr class="row-odd"><td><p>0 0 1 * *</p></td>
+<td><p>매월 1일 자정</p></td>
+</tr>
+<tr class="row-even"><td><p>45 23 * * SAT</p></td>
+<td><p>매주 토요일 23시 45분</p></td>
+</tr>
+<tr class="row-odd"><td><p>0 0 * * MON, WED, FRI</p></td>
+<td><p>매주 월, 화, 금 자정에 실행</p></td>
+</tr>
+<tr class="row-even"><td><p>0 0 * * MON-FRI</p></td>
+<td><p>매주 월~금 자정에 실행</p></td>
+</tr>
+<tr class="row-odd"><td><p>0 0,12 * * *</p></td>
+<td><p>매일 자정 및 오후 12시 실행</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="backfill">
+<h3>백필(backfill)<a class="headerlink" href="#backfill" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>DAG의 과거 시점을 지정해 실행하는 프로세스 입니다.</p></li>
+<li><p>DAG에 과거 시작 날짜를 지정하고 해당 DAG를 활성화하면 과거 시작 이후부터 현재시간까지의 모든 스케쥴 간격이 생성됩니다.</p></li>
+<li><p>Backfill의 경우 <code class="docutils literal notranslate"><span class="pre">catchup</span></code>이라는 매개변수에 의해 제어됩니다. (True/False)</p></li>
+</ul>
+</section>
+<section id="dag">
+<h3>🛠 매일 0시 0분에 실행되는 DAG예제<a class="headerlink" href="#dag" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>DAG<span class="o">(</span><span class="w"> </span>
+<span class="w">    </span><span class="nv">dag_id</span><span class="o">=</span><span class="s1">&#39;test_dag&#39;</span>,<span class="w"> </span>
+<span class="w">    </span><span class="nv">schedule_interval</span><span class="o">=</span><span class="s1">&#39;0 0 * * *&#39;</span>,<span class="w"> </span>
+<span class="w">    </span><span class="nv">start_date</span><span class="o">=</span>datetime.datetime<span class="o">(</span><span class="m">2023</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">1</span><span class="o">)</span><span class="w"> </span>
+<span class="o">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>위와 같이 설정하게 되면, 최초 실행일자는 2023년 1월 2일 0시 0분이며,
+2023년 1월 1일 0시 ~ 2023년 1월 1일 23시 59분 까지의 데이터를 기준으로 작업합니다.</p></li>
+<li><p>만약 2021년 1월 4일에 start_date가 2021-01-01인 DAG를 생성하여 ON했다면 2021-01-01, 2021-01-02, 2021-01-03에 해당하는 스케쥴이 트리거되어 실행됩니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Start_date</span></code> : 처음 DAG가 실행되는 시간이 아닌, COPY하기 시작한 시간 입니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Execution_date</span></code> : 실행시각이 아닌, 일련의 주문번호 개념 (crontab실행시점)</p>
+<ul>
+<li><p>증분 적재하는 경우에만 활용 가능합니다.</p></li>
+<li><p>파이프라인 실패 혹은 재처리가 필요할 경우 사용하는 변수값 입니다.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="id8">
+<h2>Airflow는 만능?!<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Airflow는 scheduling 기반의 batch 용 workflow 도구입니다.</p></li>
+<li><p>아래와 같은 기능은 어려움이 있습니다.</p>
+<ul>
+<li><p>streaming 작업 (마이크로 배치식으로 부분적으로 구현은 가능)</p></li>
+<li><p>무한히 실행되는 작업</p></li>
+<li><p>Airflow 외부 요소에 의해 trigger 되는 scheduling 방식 (API로 트리거는 가능, 외부 API가 DAG을 찌르는 건 어려움)</p></li>
+</ul>
+</li>
+<li><p>아래와 같은 작업은 airflow에서 적합하지 않을 수 있습니다.</p>
+<ul>
+<li><p>지연을 허용하지 않는 작업의 스케줄링</p></li>
+<li><p>Airflow worker 내에서 고부하 작업의 처리 (내부에서 고연산 작업을 하기보단 제출하는 형태로 구현합니다.)</p></li>
+</ul>
+</li>
+</ul>
+<script src="https://utteranc.es/client.js"
+        repo="Pseudo-Lab/data-engineering-for-everybody"
+        issue-term="pathname"
+        label="comments"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./docs/7_introduction_to_apache_airflow"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="main_page.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">7. Introduction to Apache Airflow</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="7.2_airflow_executor.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">7.2 Airflow Executor</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#airflow">Airflow 란?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><code class="docutils literal notranslate"><span class="pre">데이터</span> <span class="pre">파이프라인</span></code>을 관리하기 위한 Airflow</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Airflow의 장단점</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">장점:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">단점:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Airflow의 주요 컴포넌트</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">이외 컴포넌트</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Airflow 스케쥴링</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#backfill">백필(backfill)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dag">🛠 매일 0시 0분에 실행되는 DAG예제</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Airflow는 만능?!</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By PseudoLab
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
