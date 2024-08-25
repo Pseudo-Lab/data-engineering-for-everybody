@@ -7,7 +7,7 @@
   - [김승규]()
   - [김승태](https://github.com/RyanKor)
   - [김예진](https://github.com/Yejining)
-  - [신진수]()
+  - [신진수](https://github.com/jsshin2022)
   - [이동욱](https://github.com/ehddnr301)
   - [이영전]()
   - [이호민](https://github.com/DShomin)
